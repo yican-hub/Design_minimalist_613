@@ -1,0 +1,44 @@
+project: ppt-research
+version: "0.6"
+entry:
+  rules: ../../../../references/GENERAL.md
+  project_index: ../../../../references/PROJECTS.md
+  html_example: ./example.html
+canvas:
+  canonical: "1440x810"
+  ratio: "16:9"
+  responsive_reflow: false
+  preview_scale: "min(containerW / 1440, containerH / 810)"
+  transform_origin: "top left"
+font:
+  family:
+    - "PingFang SC"
+    - "Noto Sans SC"
+    - "Source Han Sans SC"
+    - "sans-serif"
+  display: { size: 40px, weight: 300, line_height: 1.15 }
+  h2: { size: 28px, weight: 500, line_height: 1.25 }
+  body: { size: 20px, weight: 400, line_height: 1.45 }
+  body_emphasis: { size: 20px, weight: 600, line_height: 1.35 }
+  label: { size: 15px, weight: 600, line_height: 1.35 }
+  note: { size: 13px, weight: 400, line_height: 1.45 }
+palette:
+  default: purple
+  neutral: { bg: "#FFFFFF", surface: "#F8F6F7", text: "#30363D", text2: "#59616A", muted: "#8A929B", border: "#E6E8EA" }
+  semantic: { p100: "#EEE8F5", p300: "#DDD2EB", p500: "#CEBFE2", p700: "#9B88B3" }
+priority:
+  mode: image-first
+  image_area: "60-75%"
+  text_role: "结论与阅读路径"
+  wide_image: { when: "ratio >= 2.0", layout: "top-image/bottom-text" }
+  normal_image: { layout: "left-text/right-image", column_ratio: "0.6/1.8" }
+assets:
+  avatar_library:
+    path: ./assets/avatar-library-v3.png
+    ratio: "3:2"
+    fit: contain
+    recall: "仅 Persona、用户旅程、年龄或性别角色场景"
+render_contract:
+  internal_layout: fixed
+  export_source: "unscaled canonical DOM"
+  overflow_order: ["图满宽或文字下移", "精简文字", "调列宽", "拆页", "最后缩图"]

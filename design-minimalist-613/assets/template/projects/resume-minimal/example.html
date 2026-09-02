@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>匿名简历层级示例</title>
+<style>
+:root{
+  --page-w:595px;--page-h:837px;--pad-x:40px;--pad-y:32px;
+  --ink:#282828;--sub:#666;--panel:#F4F4F4;
+  --rule-l1:#8F8F8F;--rule-l2:#C2C2C2;--rule-l3:#E2E2E2;
+  --font:"PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif;
+  --l1-size:8.90pt;--l1-weight:600;--l1-line:1.20;--l1-after:8px;
+  --l2-size:7.35pt;--l2-weight:600;--l2-line:1.28;--l2-after:4px;
+  --l3-size:6.82pt;--l3-weight:600;--l3-line:1.32;--l3-after:4px;
+  --l4-size:6.12pt;--l4-weight:325;--l4-line:1.46;--l4-after:4px;
+  --l5-size:5.72pt;--l5-weight:400;--l5-line:1.35;--l5-after:4px;
+  --avatar-w:52px;--avatar-h:64px;--avatar-position:50% 42%;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#e9e9e9;color:var(--ink);font-family:var(--font);font-weight:var(--l4-weight)}
+body{padding:24px 0}
+.preview{width:min(100%,595px);aspect-ratio:595/837;margin:0 auto;position:relative;overflow:hidden}
+.preview-scale{width:595px;height:837px;transform-origin:top left}
+.page{width:var(--page-w);height:var(--page-h);padding:var(--pad-y) var(--pad-x);background:#fff;overflow:hidden;font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line)}
+.header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:12px}
+.identity{display:flex;align-items:flex-start;gap:12px}.avatar-frame{width:var(--avatar-w);height:var(--avatar-h);overflow:hidden;flex:0 0 auto;background:var(--panel)}
+.avatar-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--avatar-position)}
+.name{font-size:14pt;font-weight:600;line-height:1.1}.role{margin-top:4px;color:var(--sub);font-size:var(--l5-size);line-height:var(--l5-line)}
+.contact{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 8px;max-width:220px;color:var(--sub);font-size:var(--l5-size);line-height:var(--l5-line)}
+.section-title{margin-top:12px;margin-bottom:var(--l1-after);padding-bottom:4px;border-bottom:.5pt solid var(--rule-l1);font-size:var(--l1-size);font-weight:var(--l1-weight);line-height:var(--l1-line)}
+.entry{padding-bottom:8px;margin-bottom:8px;border-bottom:.4pt solid var(--rule-l2)}.entry:last-child{margin-bottom:0}
+.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:var(--l2-after);font-size:var(--l2-size);font-weight:var(--l2-weight);line-height:var(--l2-line)}
+.meta{font-size:var(--l5-size);font-weight:var(--l5-weight);line-height:var(--l5-line);white-space:nowrap;color:var(--sub)}
+.project{padding-bottom:6px;margin-bottom:6px;border-bottom:.35pt solid var(--rule-l3)}.project:last-child{margin-bottom:0}
+.project-head{background:var(--panel);padding:4px 8px;margin-bottom:var(--l3-after);font-size:var(--l3-size);font-weight:var(--l3-weight);line-height:var(--l3-line)}
+ul{list-style:none}li{position:relative;padding-left:8px;margin-bottom:var(--l4-after);font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line)}li:last-child{margin-bottom:0}
+li::before{content:"";position:absolute;left:1px;top:.62em;width:2px;height:2px;background:var(--ink)}
+strong,b{font-weight:600}u{font-weight:400;text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:1px}em u{font-weight:400;font-style:italic}b em u{font-weight:600;font-style:italic}
+.skills li{font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line)}
+@page{size:A4;margin:0}@media print{html,body{background:#fff;text-rendering:geometricPrecision;-webkit-font-smoothing:grayscale;letter-spacing:-.005em}body{padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}.preview{width:595px;height:837px;aspect-ratio:auto;margin:0}.preview-scale{transform:none!important}}
+</style>
+</head>
+<body>
+<main class="preview" aria-label="匿名单页 A4 简历预览"><div class="preview-scale"><article class="page">
+<header class="header"><div class="identity"><figure class="avatar-frame"><img src="assets/profile-avatar.png" alt="匿名头像示例"></figure><div><h1 class="name">候选人</h1><p class="role">目标方向｜能力标签</p></div></div><div class="contact"><span>城市占位</span><span>联系方式占位</span><span>邮箱占位</span></div></header>
+<h2 class="section-title">经历 EXPERIENCE</h2>
+<section class="entry"><div class="entry-head"><span>机构类型｜<strong>指定小部门</strong>｜岗位类型</span><span class="meta">20XX.XX–20XX.XX</span></div>
+<div class="project"><div class="project-head">统一 L3 项目标题</div><ul><li><strong>标签：</strong>正文与技能描述统一使用 L4，不因内容长度改变字号</li><li><u>仅下划线</u>、<em><u>斜体加下划线</u></em>、<b><em><u>加粗斜体加下划线</u></em></b>逐项映射源标记</li></ul></div>
+<div class="project"><div class="project-head">较长的项目标题也继续使用同一 L3 Token</div><ul><li>优先通过层级间距比例平衡页面，不响应式重排内部节点</li></ul></div></section>
+<section class="entry"><div class="entry-head"><span>另一机构类型｜岗位类型</span><span class="meta">20XX.XX–20XX.XX</span></div><div class="project"><div class="project-head">第三个项目标题</div><ul><li>示例仅展示结构、层级和富文本映射，不包含真实业务数据</li></ul></div></section>
+<h2 class="section-title">技能 SKILLS</h2><div class="skills"><ul><li><strong>能力类别：</strong>技能项目描述继续使用 L4</li><li><strong>工具类别：</strong>标签只按源文档加粗</li></ul></div>
+</article></div></main>
+<script>(function(){const p=document.querySelector('.preview'),l=document.querySelector('.preview-scale');function fit(){l.style.transform=`scale(${Math.min(p.clientWidth/595,p.clientHeight/837)})`}addEventListener('resize',fit,{passive:true});fit()})();</script>
+</body>
+</html>

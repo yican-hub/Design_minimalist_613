@@ -1,0 +1,75 @@
+project: resume-minimal
+entry:
+  rules: ../../../../references/GENERAL.md
+  project_index: ../../../../references/PROJECTS.md
+  html_example: ./example.html
+  render_contract: ./canvas-contract.md
+canvas:
+  canonical: "595x837"
+  medium: "single-page A4"
+  responsive_reflow: false
+  preview: "outer uniform scale only"
+priority: text-first
+grid:
+  unit: 4px
+  safe_boundary: strict
+  fill_strategy: "balance hierarchy spacing before changing type size"
+canonical_dom: shared-screen-print
+typography:
+  family: '"PingFang SC", "Noto Sans SC", "Source Han Sans SC", sans-serif'
+  hierarchy:
+    L1_section: {size: 8.90pt, weight: 600, line: 1.20, after: 8px}
+    L2_experience: {size: 7.35pt, weight: 600, line: 1.28, after: 4px}
+    L3_project_title: {size: 6.82pt, weight: 600, line: 1.32, after: 4px}
+    L4_body: {size: 6.12pt, weight: 325, line: 1.46, after: 4px}
+    L5_meta: {size: 5.72pt, weight: 400, line: 1.35, after: 4px}
+  coupling_rule: "切换层级时同时联动字号、字重、行高与 after spacing"
+  project_title_rule: "所有项目标题统一使用 L3，不因长度或位置缩放"
+  body_rule: "正文与技能项目描述统一使用 L4"
+  rich_text:
+    underline: {weight: 400, decoration: underline}
+    italic_underline: {weight: 400, style: italic, decoration: underline}
+    bold: {weight: 600}
+    bold_italic_underline: {weight: 600, style: italic, decoration: underline}
+    source_mapping:
+      "<u>": underline
+      "<em><u>": italic_underline
+      "<b><em><u>": bold_italic_underline
+    exact_only: true
+  scope: "以上数值仅属于 resume-minimal preset，不晋升为通用规则"
+emphasis:
+  labels: "仅按源文档加粗"
+  company_line: "仅强调源文档指定的小部门，不整行无差别加粗"
+rules:
+  section: {color: "#8F8F8F", width: 0.5pt}
+  experience: {color: "#C2C2C2", width: 0.4pt}
+  project: {color: "#E2E2E2", width: 0.35pt}
+print_calibration:
+  text_rendering: geometricPrecision
+  webkit_font_smoothing: grayscale
+  letter_spacing: -0.005em
+avatar:
+  stable_resource: "assets/profile-avatar.png"
+  frame: {width: 52px, height: 64px, overflow: hidden}
+  fit: cover
+  position: "50% 42%"
+  position_rule: "按构图校准 object-position，不移动固定框"
+pdf_delivery:
+  default_when_single_final: [html_link, high_resolution_image_pdf]
+  image_pdf:
+    purpose: "最大程度还原 HTML"
+    scale_min: 5
+    dpi_min: 360
+    image_format: "lossless PNG"
+    canvas_px: "2975x4185"
+    wrapper: "single-page A4"
+    searchable: false
+  text_pdf: "需要检索时额外保留文本版"
+  validation: [pdfinfo, pdfimages, html_vision]
+  validation_targets: [page_count, page_size, embedded_image_resolution, visual_layout]
+punctuation:
+  sentence_final_chinese_period: optional_when_explicitly_requested
+  sync_targets: [source_document, html, pdf]
+  validation: count_zero
+facts:
+  regeneration_rule: "姓名、联系方式等事实字段更新后必须重新生成 PDF，不得只修改 HTML"

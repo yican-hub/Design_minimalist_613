@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "slug": "ppt-research",
+      "title": "研究型演示",
+      "canvas": "1440x810 / 16:9",
+      "priority": "image-first",
+      "status": "seed",
+      "updated_at": "2026-08-02"
+    },
+    {
+      "slug": "resume-minimal",
+      "title": "极简简历",
+      "canvas": "595x837 / A4 print",
+      "priority": "text-first",
+      "status": "confirmed",
+      "updated_at": "2026-08-29"
+    }
+  ]
+}

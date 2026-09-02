@@ -1,0 +1,11 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime artifacts
+**/__pycache__/
+**/*.pyc
+**/temp_data/
+**/*.log

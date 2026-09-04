@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Spec v0.6｜视觉量感设计规范</title>
+  <meta name="description" content="面向固定画板、研究型演示与极简简历的设计规范展示页。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="page-head">
+      <div><strong>DESIGN SPEC / v0.6</strong><p>以固定画板、统一 Token 与视觉量感建立稳定的生成秩序。</p></div>
+    </header>
+
+    <section class="section" id="grid-type">
+      <div class="section-heading"><span>01</span><div><h2>网格 × 字体</h2><p>空间全部落在 4px 阶梯；字体只通过统一层级 Token 调用。</p></div></div>
+      <div class="rhythm-layout">
+        <article class="grid-panel"><div class="type-label accent">SPACE / U = 4PX</div><div class="grid-stage" id="gridStage"><div class="measure m8"><span>8</span></div><div class="measure m12"><span>12</span></div><div class="measure m24"><b>24</b><span>6u</span></div><div class="measure m48"><b>48</b><span>12u</span></div><div class="measure m64"><b>64</b><span>16u</span></div></div><p class="type-note muted">常用距离 8 / 12 / 24 / 48 / 64，保持稳定阅读节奏。</p></article>
+        <article class="type-panel"><div class="type-label accent">TYPE / TOKEN ONLY</div><div class="type-row display-row"><span class="type-note">DISPLAY · 34 / 1.15</span><strong>秩序来自标尺</strong></div><div class="type-row h2-row"><span class="type-note">H2 · 22 / 1.30</span><strong>空间组织阅读</strong></div><div class="type-row body-row"><span class="type-note">BODY · 16 / 1.60</span><strong>组件引用统一 Token，项目只整体覆盖，不局部改字。</strong></div><div class="type-pair"><div class="type-row"><span class="type-note">LABEL · 13</span><strong class="type-label">SYSTEM LABEL</strong></div><div class="type-row"><span class="type-note">NOTE · 12</span><strong class="type-note">参数、来源与辅助说明。</strong></div></div></article>
+      </div>
+    </section>
+
+    <section class="section" id="colors">
+      <div class="section-heading"><span>02</span><div><h2>雾感八色</h2><p>低色度主题共享同一视觉重量；切色时，范围、结果、标签与连线同步更新。</p></div></div>
+      <div class="color-layout"><div class="palette"><div class="tone p100"><span class="type-label">P100 / 浅底</span><code data-tone="100"></code></div><div class="tone p300"><span class="type-label">P300 / 反馈</span><code data-tone="300"></code></div><div class="tone p500"><span class="type-label">P500 / 主色</span><code data-tone="500"></code></div><div class="tone p700"><span class="type-label">P700 / 标签</span><code data-tone="700"></code></div></div><div class="hue-control"><div class="color-status"><span class="type-note muted">当前色相</span><strong class="type-label" id="themeName">紫 / 默认</strong></div><div class="hues" id="hueList"></div><p class="type-note muted">组件使用语义色阶；重色只服务于小标签与关键焦点。</p></div></div>
+    </section>
+
+    <section class="section" id="hierarchy-flow">
+      <div class="section-heading"><span>03</span><div><h2>层级 × 流程</h2><p>先按可见量感分类，再对齐实体内容；虚线仅表达语义范围。</p></div></div>
+      <div class="flow-legend"><span><i class="legend-l1"></i>L1 浅底</span><span><i class="legend-l2"></i>line / 范围</span><span><i class="legend-l3"></i>surface / 卡片</span><span><i class="legend-key"></i>mass / 结果</span><span><i class="legend-feedback"></i>反馈</span></div>
+      <figure class="diagram-frame" id="diagramFrame"><div class="diagram-canvas"><div class="canvas-kicker type-label">L1</div><h3 class="canvas-title">模型迭代系统 / DATA FLYWHEEL</h3><section class="flow-block input-block"><div class="block-head type-label">L2 双列输入 / SURFACE</div><div class="input-grid"><article class="flow-node"><b class="node-tag type-label">数据标签</b><strong class="type-body-emphasis">高质量样本</strong><p class="type-note">去噪 · 分层 · 配比</p></article><article class="flow-node"><b class="node-tag type-label">策略标签</b><strong class="type-body-emphasis">目标与约束</strong><p class="type-note">质量 · 成本 · 安全</p></article></div></section><article class="result-block"><div><span class="result-tag type-label">RESULT / L3 KEY</span><strong class="type-h2">核心结果层</strong></div><p class="type-label">可评估 · 可上线 · 可持续优化</p></article><section class="flow-block validation-block"><div class="block-head type-label">L2 三步验证 / SURFACE</div><div class="validation-grid"><article class="flow-node"><b class="node-tag type-label">01 / 离线</b><strong class="type-body-emphasis">基准评测</strong><p class="type-note">确认能力边界</p></article><article class="flow-node"><b class="node-tag type-label">02 / 灰度</b><strong class="type-body-emphasis">线上实验</strong><p class="type-note">验证真实增益</p></article><article class="flow-node"><b class="node-tag type-label">03 / 决策</b><strong class="type-body-emphasis">版本准入</strong><p class="type-note">守住质量门槛</p></article></div></section><aside class="loop-slot"><div class="loop-inner"><span class="type-label">CONTINUOUS LOOP</span><strong class="type-body-emphasis">持续 Loop</strong><p class="type-note">失败案例与反馈回流为新样本、标签与约束。</p><div class="loop-list type-note"><span>01 异常样本</span><span>02 人工复核</span><span>03 策略更新</span></div></div></aside><div class="arrow down input-to-result"></div><div class="arrow down result-to-validation"></div><div class="arrow right validate-one"></div><div class="arrow right validate-two"></div><div class="feedback feedback-out"></div><div class="feedback feedback-back"></div></div></figure>
+      <p class="figure-note type-note muted">实体卡片与结果层共享可见边界；Loop 与主内容保留白色隔离，视觉量感低于主系统。</p>
+    </section>
+
+    <section class="section" id="image-shape">
+      <div class="section-heading"><span>04</span><div><h2>图文 × 形状</h2><p>先定信息主角，再分配面积；直角、无阴影、无渐变，填色与边线二选一。</p></div></div>
+      <div class="composition-grid"><article class="layout-demo wide-demo"><div class="mock-image"><i></i><i></i><i></i></div><div><b class="type-label accent">RATIO ≥ 2.0 · IMAGE 60–75%</b><strong class="type-body">宽图最大化，上图下文</strong><p class="type-note muted">图注紧贴图片。</p></div></article><article class="layout-demo normal-demo"><div><b class="type-label accent">RATIO &lt; 2.0</b><strong class="type-body">左文右图</strong><p class="type-note muted">图片保持比例；空间不足先让图满宽。</p></div><div class="mock-image portrait"><i></i><i></i></div></article><div class="xor-demo"><div class="shape fill-shape"><b>FILL</b><span class="type-note">有填色 / 无边线</span></div><strong class="type-label muted">XOR</strong><div class="shape border-shape"><b>BORDER</b><span class="type-note">白底 / 有边线</span></div></div></div>
+    </section>
+
+    <section class="section" id="fixed-canvas">
+      <div class="section-heading"><span>05</span><div><h2>固定画板</h2><p>先选择 canonical canvas，再排版与导出；预览只做整体等比缩放。</p></div></div>
+      <div class="canvas-contract"><article class="canvas-case"><div class="case-head"><b class="type-label accent">研究型演示</b><span class="type-note">1440 × 810 / 16:9</span></div><div class="preview-well"><div class="ppt-board"><span class="type-label">CANONICAL PPT</span><i></i><b>图优先 60–75%</b></div></div></article><article class="canvas-case"><div class="case-head"><b class="type-label accent">极简简历</b><span class="type-note">595 × 837 / PRINT A4</span></div><div class="preview-well"><div class="resume-board"><span class="type-label">595 × 837</span><i></i><i></i><i></i><b class="type-note">文本优先 75–90%</b></div></div></article></div>
+      <div class="scale-formula"><span class="type-label">PREVIEW SCALE</span><strong>容器内整体等比缩放</strong><p class="type-note">以左上角为缩放原点 · 禁止响应式重排 · PDF 从未缩放画板导出</p></div>
+    </section>
+
+    <section class="section" id="template-usage">
+      <div class="section-heading"><span>06</span><div><h2>Template 包含什么</h2><p>规则负责稳定生成，项目实例负责复用结构，预览负责理解设计；三者不混在同一层维护。</p></div></div>
+      <div class="template-grid">
+        <article class="template-card"><span class="type-label accent">RULES</span><strong>通用规范 + 项目 Presets</strong><p>通用 Token、画板合同与跨项目方法放在 GENERAL；尺寸、媒介优先级和特殊例外放在 PROJECTS。</p></article>
+        <article class="template-card"><span class="type-label accent">SOURCE</span><strong>项目 HTML 源文件</strong><p>每个项目保留确认过的 example.html，复用真实结构、排版与组件关系，不从零猜测。</p></article>
+        <article class="template-card"><span class="type-label accent">ASSETS</span><strong>项目专属资产</strong><p>头像、照片、插画及其他只在特定项目召回的资源，跟随对应项目独立维护。</p></article>
+        <article class="template-card"><span class="type-label accent">PREVIEW</span><strong>规范可视化 + 固定画板 PDF</strong><p>HTML 负责连续浏览；PDF 默认以 1440 × 810 固定画板、一模块一页输出，特殊媒介再覆盖尺寸。</p></article>
+      </div>
+      <div class="usage-flow"><span class="type-label">01 读取 GENERAL</span><i></i><span class="type-label">02 选择 PROJECT PRESET</span><i></i><span class="type-label">03 复用 HTML + ASSETS</span><i></i><span class="type-label">04 固定画板导出</span></div>
+      <p class="usage-note type-note muted">默认策略：浏览页面可流式响应；一旦进入 PDF、PPT、海报或截图交付，就先锁定 canonical canvas。特殊需求只覆盖画板尺寸，不重写内部规则。</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -3,53 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>匿名简历层级示例</title>
+<title>匿名简历｜复杂层级生成示例</title>
 <style>
 :root{
-  --page-w:595px;--page-h:837px;--pad-x:40px;--pad-y:32px;
-  --ink:#282828;--sub:#666;--panel:#F4F4F4;
-  --rule-l1:#8F8F8F;--rule-l2:#C2C2C2;--rule-l3:#E2E2E2;
-  --font:"PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif;
-  --l1-size:8.90pt;--l1-weight:600;--l1-line:1.20;--l1-after:8px;
-  --l2-size:7.35pt;--l2-weight:600;--l2-line:1.28;--l2-after:4px;
-  --l3-size:6.82pt;--l3-weight:600;--l3-line:1.32;--l3-after:4px;
-  --l4-size:6.12pt;--l4-weight:325;--l4-line:1.46;--l4-after:4px;
-  --l5-size:5.72pt;--l5-weight:400;--l5-line:1.35;--l5-after:4px;
+  --page-w:595px;--page-h:837px;--pad-x:40px;--pad-y:30px;
+  --ink:#292929;--sub:#686868;--muted:#8a8a8a;--panel:#f2f2f2;
+  --rule-l1:#8f8f8f;--rule-l2:#c8c8c8;--rule-l3:#e3e3e3;
+  --font:"PingFang SC","Noto Sans SC","Source Han Sans SC","Microsoft YaHei",sans-serif;
+  --l1-size:8.8pt;--l1-weight:600;--l1-line:1.18;
+  --l2-size:7.2pt;--l2-weight:600;--l2-line:1.25;
+  --l3-size:6.65pt;--l3-weight:600;--l3-line:1.28;
+  --l4-size:6.0pt;--l4-weight:325;--l4-line:1.40;
+  --l5-size:5.55pt;--l5-weight:400;--l5-line:1.30;
   --avatar-w:52px;--avatar-h:64px;--avatar-position:50% 42%;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#e9e9e9;color:var(--ink);font-family:var(--font);font-weight:var(--l4-weight)}
+html,body{background:#e9e9e9;color:var(--ink);font-family:var(--font);font-weight:var(--l4-weight);text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
 body{padding:24px 0}
 .preview{width:min(100%,595px);aspect-ratio:595/837;margin:0 auto;position:relative;overflow:hidden}
 .preview-scale{width:595px;height:837px;transform-origin:top left}
-.page{width:var(--page-w);height:var(--page-h);padding:var(--pad-y) var(--pad-x);background:#fff;overflow:hidden;font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line)}
-.header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:12px}
-.identity{display:flex;align-items:flex-start;gap:12px}.avatar-frame{width:var(--avatar-w);height:var(--avatar-h);overflow:hidden;flex:0 0 auto;background:var(--panel)}
+.page{width:var(--page-w);height:var(--page-h);padding:var(--pad-y) var(--pad-x);background:#fff;overflow:hidden;font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line);letter-spacing:-.004em}
+.header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding-bottom:12px;border-bottom:.55pt solid var(--rule-l1)}
+.identity{display:flex;align-items:flex-start;gap:13px;min-width:0}
+.avatar-frame{width:var(--avatar-w);height:var(--avatar-h);overflow:hidden;flex:0 0 auto;background:var(--panel)}
 .avatar-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--avatar-position)}
-.name{font-size:14pt;font-weight:600;line-height:1.1}.role{margin-top:4px;color:var(--sub);font-size:var(--l5-size);line-height:var(--l5-line)}
-.contact{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 8px;max-width:220px;color:var(--sub);font-size:var(--l5-size);line-height:var(--l5-line)}
-.section-title{margin-top:12px;margin-bottom:var(--l1-after);padding-bottom:4px;border-bottom:.5pt solid var(--rule-l1);font-size:var(--l1-size);font-weight:var(--l1-weight);line-height:var(--l1-line)}
-.entry{padding-bottom:8px;margin-bottom:8px;border-bottom:.4pt solid var(--rule-l2)}.entry:last-child{margin-bottom:0}
-.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:var(--l2-after);font-size:var(--l2-size);font-weight:var(--l2-weight);line-height:var(--l2-line)}
-.meta{font-size:var(--l5-size);font-weight:var(--l5-weight);line-height:var(--l5-line);white-space:nowrap;color:var(--sub)}
-.project{padding-bottom:6px;margin-bottom:6px;border-bottom:.35pt solid var(--rule-l3)}.project:last-child{margin-bottom:0}
-.project-head{background:var(--panel);padding:4px 8px;margin-bottom:var(--l3-after);font-size:var(--l3-size);font-weight:var(--l3-weight);line-height:var(--l3-line)}
-ul{list-style:none}li{position:relative;padding-left:8px;margin-bottom:var(--l4-after);font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line)}li:last-child{margin-bottom:0}
+.name{font-size:14pt;font-weight:600;line-height:1.08;letter-spacing:.02em}
+.role{margin-top:5px;color:var(--sub);font-size:var(--l5-size);line-height:1.45}
+.profile-note{margin-top:6px;max-width:285px;font-size:var(--l4-size);line-height:1.38;color:#4d4d4d}
+.header-meta{display:grid;grid-template-columns:auto auto;gap:4px 9px;padding-top:1px;color:var(--sub);font-size:var(--l5-size);line-height:var(--l5-line);white-space:nowrap}
+.header-meta dt{color:var(--muted)}
+.section-title{display:flex;align-items:baseline;gap:7px;margin-top:10px;margin-bottom:7px;padding-bottom:4px;border-bottom:.55pt solid var(--rule-l1);font-size:var(--l1-size);font-weight:var(--l1-weight);line-height:var(--l1-line);letter-spacing:.01em}
+.section-title small{color:var(--muted);font-size:5.3pt;font-weight:400;letter-spacing:.08em}
+.timeline{position:relative;margin-left:4px;padding-left:14px}
+.timeline::before{content:"";position:absolute;left:2px;top:5px;bottom:7px;width:.45pt;background:var(--rule-l2)}
+.entry{position:relative;padding-bottom:7px;margin-bottom:7px;border-bottom:.35pt solid var(--rule-l3);break-inside:avoid}
+.entry:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+.entry::before{content:"";position:absolute;left:-14px;top:4px;width:5px;height:5px;border:1px solid #777;background:#fff;border-radius:50%;transform:translateX(-.5px)}
+.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:4px;font-size:var(--l2-size);font-weight:var(--l2-weight);line-height:var(--l2-line)}
+.entry-head .org{min-width:0}.entry-head .role-label{color:var(--sub);font-weight:400}
+.meta{flex:0 0 auto;color:var(--sub);font-size:var(--l5-size);font-weight:var(--l5-weight);line-height:var(--l5-line);white-space:nowrap}
+.scope{margin-bottom:4px;color:var(--sub);font-size:var(--l5-size);line-height:var(--l5-line)}
+.project{padding-bottom:5px;margin-bottom:5px;border-bottom:.35pt solid var(--rule-l3);break-inside:avoid}
+.project:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}
+.project-head{display:flex;justify-content:space-between;gap:10px;background:var(--panel);padding:3px 7px;margin-bottom:4px;font-size:var(--l3-size);font-weight:var(--l3-weight);line-height:var(--l3-line)}
+.project-head span:last-child{color:var(--muted);font-size:var(--l5-size);font-weight:400;white-space:nowrap}
+ul{list-style:none}
+li{position:relative;padding-left:8px;margin-bottom:2px;font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line)}
+li:last-child{margin-bottom:0}
 li::before{content:"";position:absolute;left:1px;top:.62em;width:2px;height:2px;background:var(--ink)}
-strong,b{font-weight:600}u{font-weight:400;text-decoration:underline;text-decoration-thickness:.5px;text-underline-offset:1px}em u{font-weight:400;font-style:italic}b em u{font-weight:600;font-style:italic}
-.skills li{font-size:var(--l4-size);font-weight:var(--l4-weight);line-height:var(--l4-line)}
-@page{size:A4;margin:0}@media print{html,body{background:#fff;text-rendering:geometricPrecision;-webkit-font-smoothing:grayscale;letter-spacing:-.005em}body{padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}.preview{width:595px;height:837px;aspect-ratio:auto;margin:0}.preview-scale{transform:none!important}}
+strong,b{font-weight:600}u{text-decoration-thickness:.5px;text-underline-offset:1px}
+.bottom-grid{display:grid;grid-template-columns:1fr 1.18fr;gap:17px}
+.bottom-grid .section-title{margin-top:10px}
+.edu-card{padding-left:9px;border-left:1.5px solid #b9b9b9}
+.edu-head{display:flex;justify-content:space-between;gap:8px;margin-bottom:3px;font-size:var(--l2-size);font-weight:var(--l2-weight);line-height:var(--l2-line)}
+.edu-meta{color:var(--sub);font-size:var(--l5-size);line-height:1.42}
+.skill-list{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px}
+.skill-item{border-top:.35pt solid var(--rule-l3);padding-top:3px;font-size:var(--l4-size);line-height:1.34}
+.skill-item:nth-child(-n+2){border-top:0;padding-top:0}
+.skill-item strong{display:block;margin-bottom:1px;font-size:var(--l3-size)}
+.footer-note{margin-top:8px;padding-top:5px;border-top:.4pt solid var(--rule-l2);color:var(--muted);font-size:5.2pt;line-height:1.25;text-align:right;letter-spacing:.02em}
+@page{size:A4;margin:0}
+@media print{
+  html,body{background:#fff;text-rendering:geometricPrecision;-webkit-font-smoothing:grayscale}
+  body{padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .preview{width:595px;height:837px;aspect-ratio:auto;margin:0}.preview-scale{transform:none!important}
+}
 </style>
 </head>
 <body>
-<main class="preview" aria-label="匿名单页 A4 简历预览"><div class="preview-scale"><article class="page">
-<header class="header"><div class="identity"><figure class="avatar-frame"><img src="assets/profile-avatar.png" alt="匿名头像示例"></figure><div><h1 class="name">候选人</h1><p class="role">目标方向｜能力标签</p></div></div><div class="contact"><span>城市占位</span><span>联系方式占位</span><span>邮箱占位</span></div></header>
-<h2 class="section-title">经历 EXPERIENCE</h2>
-<section class="entry"><div class="entry-head"><span>机构类型｜<strong>指定小部门</strong>｜岗位类型</span><span class="meta">20XX.XX–20XX.XX</span></div>
-<div class="project"><div class="project-head">统一 L3 项目标题</div><ul><li><strong>标签：</strong>正文与技能描述统一使用 L4，不因内容长度改变字号</li><li><u>仅下划线</u>、<em><u>斜体加下划线</u></em>、<b><em><u>加粗斜体加下划线</u></em></b>逐项映射源标记</li></ul></div>
-<div class="project"><div class="project-head">较长的项目标题也继续使用同一 L3 Token</div><ul><li>优先通过层级间距比例平衡页面，不响应式重排内部节点</li></ul></div></section>
-<section class="entry"><div class="entry-head"><span>另一机构类型｜岗位类型</span><span class="meta">20XX.XX–20XX.XX</span></div><div class="project"><div class="project-head">第三个项目标题</div><ul><li>示例仅展示结构、层级和富文本映射，不包含真实业务数据</li></ul></div></section>
-<h2 class="section-title">技能 SKILLS</h2><div class="skills"><ul><li><strong>能力类别：</strong>技能项目描述继续使用 L4</li><li><strong>工具类别：</strong>标签只按源文档加粗</li></ul></div>
+<main class="preview" aria-label="匿名单页 A4 简历复杂层级预览"><div class="preview-scale"><article class="page">
+  <header class="header">
+    <div class="identity">
+      <figure class="avatar-frame"><img src="assets/profile-avatar.png" alt="匿名头像示例"></figure>
+      <div>
+        <h1 class="name">匿名候选人</h1>
+        <p class="role">通用产品与设计方向｜结构化表达 · 跨职能协作</p>
+        <p class="profile-note">关注复杂信息的梳理与落地，擅长从问题定义、方案推演到交付复盘的完整协作链路。</p>
+      </div>
+    </div>
+    <dl class="header-meta">
+      <dt>意向地区</dt><dd>可协商</dd>
+      <dt>工作方式</dt><dd>灵活</dd>
+      <dt>当前状态</dt><dd>开放交流</dd>
+    </dl>
+  </header>
+
+  <h2 class="section-title">工作经历 <small>EXPERIENCE</small></h2>
+  <div class="timeline">
+    <section class="entry">
+      <div class="entry-head"><span class="org">综合服务机构｜体验设计组 <span class="role-label">· 高级设计岗位</span></span><time class="meta">20XX.07—至今</time></div>
+      <p class="scope">职责范围｜复杂流程体验、设计系统与跨角色协作</p>
+      <div class="project">
+        <div class="project-head"><span>匿名案例 A｜复杂流程体验重构</span><span>主导设计</span></div>
+        <ul>
+          <li><strong>问题定义：</strong>梳理多角色任务链路，以分层信息模型统一需求、状态与异常路径。</li>
+          <li><strong>方案推进：</strong>通过流程图、低保真原型与评审记录建立可追溯决策，协同产品与研发完成交付。</li>
+          <li><strong>沉淀复用：</strong>将共性模式整理为组件规则与检查清单，支持后续同类场景稳定扩展。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="entry">
+      <div class="entry-head"><span class="org">数字产品机构｜平台产品组 <span class="role-label">· 产品设计岗位</span></span><time class="meta">20XX.03—20XX.06</time></div>
+      <p class="scope">职责范围｜跨端框架、信息架构与交互规范</p>
+      <div class="project">
+        <div class="project-head"><span>匿名案例 B｜跨端信息架构统一</span><span>核心参与</span></div>
+        <ul>
+          <li><strong>结构梳理：</strong>归纳不同终端的内容层级与操作语义，定义一致的导航、反馈和权限表达。</li>
+          <li><strong>交付协同：</strong>维护关键页面、状态矩阵及标注说明，推动设计意图在多端实现中保持一致。</li>
+          <li><strong>验证迭代：</strong>结合可用性观察与团队反馈定位理解偏差，持续调整信息顺序和操作提示。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="entry">
+      <div class="entry-head"><span class="org">技术服务机构｜设计支持组 <span class="role-label">· 视觉设计岗位</span></span><time class="meta">20XX.07—20XX.02</time></div>
+      <p class="scope">职责范围｜界面视觉、内容模板与基础规范</p>
+      <ul>
+        <li>承接多类型界面与内容需求，以<strong>网格、字体、色彩和间距</strong>规范提升输出一致性。</li>
+        <li>参与需求澄清、方案提案与交付验收，形成版本记录和复盘要点，支持团队协作衔接。</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="bottom-grid">
+    <section>
+      <h2 class="section-title">教育背景 <small>EDUCATION</small></h2>
+      <div class="edu-card">
+        <div class="edu-head"><span>高等教育机构｜设计相关专业</span><time class="meta">20XX—20XX</time></div>
+        <p class="edu-meta">本科｜课程方向：信息设计、交互方法、视觉表达与研究基础</p>
+      </div>
+    </section>
+    <section>
+      <h2 class="section-title">专业技能 <small>SKILLS</small></h2>
+      <div class="skill-list">
+        <div class="skill-item"><strong>体验与产品</strong>流程建模、信息架构、原型与可用性验证</div>
+        <div class="skill-item"><strong>视觉与规范</strong>版式系统、组件规则、跨端一致性与交付标注</div>
+        <div class="skill-item"><strong>研究与分析</strong>访谈提纲、观察记录、问题归纳与方案复盘</div>
+        <div class="skill-item"><strong>协作与表达</strong>需求澄清、评审推进、文档沉淀与跨角色沟通</div>
+      </div>
+    </section>
+  </div>
+
+  <p class="footer-note">公开示例｜全部信息均为匿名泛化内容，仅用于展示复杂层级与单页排版</p>
 </article></div></main>
 <script>(function(){const p=document.querySelector('.preview'),l=document.querySelector('.preview-scale');function fit(){l.style.transform=`scale(${Math.min(p.clientWidth/595,p.clientHeight/837)})`}addEventListener('resize',fit,{passive:true});fit()})();</script>
 </body>

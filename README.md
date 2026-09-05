@@ -54,7 +54,7 @@ Design Minimalist 613 的核心不是复刻某一种视觉风格，而是先把*
 
 ### 网页｜匿名首图结构与图文编排
 
-垫了@四四的图作为生成，请勿商用。
+垫了@四四（红薯号）的人物图作为生成，请勿商用。
 
 ![匿名个人网页首图预览](readme-assets/web-personal-anonymized.png)
 

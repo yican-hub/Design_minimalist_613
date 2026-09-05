@@ -40,17 +40,17 @@ Design Minimalist 613 的核心不是复刻某一种视觉风格，而是先把*
 
 ### PPT｜由简单到复杂，快速生成
 
-**05 研究不足｜四项待深化问题**
+**01 研究不足｜四项待深化问题**
 
-![PPT 05 研究不足完整页](readme-assets/ppt-05-limitations.png)
+![PPT 01 研究不足完整页](readme-assets/ppt-01-limitations.png)
 
 **02 理论基础｜理论演变谱系**
 
 ![PPT 02 理论基础完整页](readme-assets/ppt-02-theory.png)
 
-**04 商业模式｜复杂画布结构**
+**03 商业模式｜复杂画布结构**
 
-![PPT 04 商业模式复杂画布](readme-assets/ppt-04-business-canvas.png)
+![PPT 03 商业模式复杂画布](readme-assets/ppt-03-business-canvas.png)
 
 ### 网页｜匿名首图结构与图文编排
 

@@ -69,7 +69,7 @@ priority: text-first
 preset: assets/template/projects/resume-minimal/preset.yaml
 ```
 
-固定单页 595×837 A4；HTML 仅外层等比缩放。L1–L5 同时联动字号、字重、行高与段后距，项目标题统一 L3，正文与技能描述统一 L4；分割线按 section/经历/项目递减。富文本逐项映射源标记，头像使用固定框与稳定资源。默认以 HTML 链接和至少 5×/360DPI 无损 PNG 图片 PDF 保真交付，并用 pdfinfo、pdfimages、html_vision 验证；句末无句号仅在明确要求时同步，事实字段变更后重新生成 PDF。
+固定单页 595×837 A4；HTML 仅外层等比缩放。输入可以是未经润色的 Markdown 经历，先由 AI 提炼为“经历—项目—目标—动作—结果”的结构，再套用 A4 模板。L1–L5 同时联动字号、字重、行高与段后距，项目标题统一 L3，正文与技能描述统一 L4；分割线按 section/经历/项目递减。公开示例沿用真实简历的版式和信息密度，仅隐藏身份、机构、项目、日期与数据。
 <!-- AUTO_PROJECT:resume-minimal END -->
 
 <!-- AUTO_PROJECT:personal-web START -->
@@ -83,5 +83,5 @@ source: assets/template/projects/personal-web/example.html
 preset: assets/template/projects/personal-web/preset.yaml
 ```
 
-沿用个人网站首屏的左右图文构图、超大标题、人物主视觉与辅助标签；浏览版只整体适配，不改动内部阅读顺序，公开实例替换身份、地点与联系方式。
+沿用个人网站首屏的左右图文构图、超大标题、人物主视觉与辅助标签；浏览版只整体适配，不改动内部阅读顺序。公开实例同时替换身份、地点、联系方式、个人口号、职业标签与栏目文案，人物图使用参考风格的原创半身变体。
 <!-- AUTO_PROJECT:personal-web END -->

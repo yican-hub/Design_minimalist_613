@@ -3,99 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>Design Minimalist 613｜匿名示例</title>
+<title>一页式简历｜匿名示例</title>
 <style>
-:root{
-  --canvas-w:595px;--canvas-h:837px;--pad-x:28px;--pad-y:22px;
-  --ink:#252525;--sub:#565656;--panel:#efefef;
-  --rule-section:#8f8f8f;--rule-entry:#c2c2c2;--rule-project:#e2e2e2;
-  --font:"PingFang SC Light","PingFang SC","Source Han Sans SC VF","Source Han Sans SC","Noto Sans CJK SC","Noto Sans SC",sans-serif;
-  --font-strong:"PingFang SC","Source Han Sans SC VF","Source Han Sans SC","Noto Sans CJK SC","Noto Sans SC",sans-serif;
-  --t-body-size:6.12pt;--t-body-weight:325;--t-body-line:1.58;--t-body-after:1.5px;
-  --t-meta-size:5.50pt;--t-meta-weight:350;--t-meta-line:1.20;
-  --t-company-size:7.35pt;--t-company-weight:600;--t-company-line:1.18;--t-company-after:4px;
-  --t-project-size:6.82pt;--t-project-weight:600;--t-project-line:1.20;--t-project-after:3px;
-  --t-section-size:8.90pt;--t-section-en-size:8.05pt;--t-section-weight:600;--t-section-line:1.10;--t-section-before:10px;--t-section-after:5px;
-  --w-emphasis:400;--w-strong:600;--w-strong-mark:600;
-  --gap-entry:6px;--gap-project:4px;--gap-edu:2px;--header-shift:6px;
-}
-@font-face{font-family:"ResumeCJKLight";src:local("PingFang SC Ultralight"),local("PingFang SC Light"),local("Source Han Sans SC VF ExtraLight"),local("Source Han Sans SC VF Light"),local("Source Han Sans SC ExtraLight"),local("Source Han Sans SC Light"),local("Noto Sans CJK SC Light");font-weight:200 400;font-style:normal;font-display:swap}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{width:100%;min-height:100%;background:#e9e9e9;color:var(--ink);font-family:"ResumeCJKLight",var(--font);font-weight:var(--t-body-weight);font-synthesis-weight:none;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:.002em;font-kerning:normal}
-body{overflow:auto}.viewport{position:relative;width:100%;min-height:100vh;padding:20px}.stage{position:relative;margin:0 auto;width:var(--canvas-w);height:var(--canvas-h)}
-.canvas{position:absolute;left:0;top:0;width:var(--canvas-w);height:var(--canvas-h);transform-origin:top left}.page{width:var(--canvas-w);height:var(--canvas-h);padding:var(--pad-y) var(--pad-x);background:#fff;overflow:hidden;position:relative;font-size:var(--t-body-size);line-height:var(--t-body-line)}
-.header{position:relative;height:56px;padding-right:52px}.name,.contact,.photo{transform:translateY(var(--header-shift))}.name{font-size:17pt;font-family:var(--font-strong);font-weight:600;letter-spacing:.35px;line-height:1.05}
-.contact{display:flex;align-items:center;gap:11px;margin-top:7px;font-size:6.22pt;font-weight:var(--t-body-weight);line-height:1.24;white-space:nowrap;color:#303030}.photo{position:absolute;right:0;top:0;width:43px;height:54px;overflow:hidden;background:#eee}.photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 38%}
-.section-title{display:flex;align-items:baseline;margin-top:var(--t-section-before);margin-bottom:var(--t-section-after);padding-bottom:2px;border-bottom:.5pt solid var(--rule-section);font-family:var(--font-strong);font-size:var(--t-section-size);font-weight:var(--t-section-weight);line-height:var(--t-section-line);letter-spacing:0}.section-title .en{margin-left:2px;font-size:var(--t-section-en-size);font-weight:600;letter-spacing:.22px}
-.entry{margin-bottom:var(--gap-entry);padding-bottom:var(--gap-entry);border-bottom:.4pt solid var(--rule-entry);break-inside:avoid}.entry:last-of-type{margin-bottom:0;padding-bottom:0;border-bottom:0}.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:6px;margin-bottom:var(--t-company-after);font-family:var(--font-strong);font-size:var(--t-company-size);line-height:var(--t-company-line);font-weight:var(--t-body-weight);letter-spacing:.001em}
-.company-wrap{display:flex;align-items:baseline;gap:3px;flex-wrap:wrap;min-width:0}.company,.company-name,.company .note,.dept-inline,.dept-strong,.date{font-size:var(--t-company-size);line-height:var(--t-company-line);color:var(--ink)}.company,.company .note,.dept-inline{font-weight:var(--t-body-weight)}.company-name,.dept-strong,.date{font-weight:var(--t-company-weight)}.entry-head.all-strong .company,.entry-head.all-strong .company .note,.entry-head.all-strong .dept-inline{font-weight:var(--t-company-weight)}.date{white-space:nowrap}
-.project{margin-top:var(--gap-project)}.project:first-of-type{margin-top:0}.project+.project{padding-top:var(--gap-project);border-top:.35pt solid var(--rule-project)}.project-header{display:flex;align-items:baseline;gap:4px;flex-wrap:wrap;background:var(--panel);padding:1px 4px 2px;margin-bottom:var(--t-project-after);font-family:var(--font-strong);font-size:var(--t-project-size);font-weight:var(--t-project-weight);line-height:var(--t-project-line);letter-spacing:0}.project-title,.project-sub{font-size:inherit;font-weight:inherit;line-height:inherit;color:var(--ink)}.project-title{white-space:nowrap}
-ul{list-style:none}.bullets li{position:relative;padding-left:7px;margin-bottom:var(--t-body-after);font-size:var(--t-body-size);font-weight:var(--t-body-weight);line-height:var(--t-body-line)}.bullets li:last-child{margin-bottom:0}.bullets li::before{content:"";position:absolute;left:1px;top:3.45px;width:2px;height:2px;background:var(--ink)}
-b,strong{font-family:var(--font-strong);font-weight:var(--w-strong)}em{font-style:italic;font-synthesis-style:auto}em u{font-family:var(--font-strong);font-weight:var(--w-emphasis);font-style:italic;text-decoration-line:underline;text-decoration-style:solid;text-decoration-thickness:.4pt;text-underline-offset:1.25px}b em u,strong em u{font-weight:var(--w-strong-mark)}u{text-decoration-line:underline;text-decoration-thickness:.4pt;text-underline-offset:1.25px;text-decoration-skip-ink:auto}.achievement{margin-top:3px;font-size:6.18pt;font-family:var(--font-strong);font-weight:600;line-height:1.28}
-.edu-row{display:grid;grid-template-columns:145px 1fr 92px;align-items:baseline;gap:6px;margin-bottom:var(--gap-edu);font-size:6.48pt;font-weight:var(--t-body-weight);line-height:1.30}.edu-row b{font-family:var(--font-strong);font-weight:600}.edu-major{text-align:right}.edu-date{text-align:center;white-space:nowrap}.skills .bullets li{font-size:var(--t-body-size);font-weight:var(--t-body-weight);line-height:var(--t-body-line);margin-bottom:var(--t-body-after)}.tools{margin-top:3px;font-size:6.56pt;line-height:1.32}
-@page{size:595px 837px;margin:0}
-@media print{html,body{width:595px;height:837px;background:#fff;overflow:hidden;font-family:"ResumeCJKLight",var(--font);font-weight:var(--t-body-weight);font-synthesis-weight:none;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:.002em;-webkit-print-color-adjust:exact;print-color-adjust:exact}body{margin:0;padding:0}.viewport,.stage{width:595px;height:837px;min-height:0;margin:0;padding:0}.canvas{transform:none!important}.page{width:595px;height:837px;margin:0;break-after:avoid;page-break-after:avoid}}
+:root{--bg:#fff;--ink:#000;--gray-soft:#ebebeb;--gray-line:#cfcfcf;--page-w:595px;--page-h:837px;--pad-x:32px;--pad-y:22px}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;min-height:100%;background:#fff;font-family:"PingFang SC","AlibabaPuHuiTi 2.0","Noto Sans CJK SC","Microsoft YaHei",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+body{display:flex;justify-content:center;align-items:flex-start;overflow:auto}.page{width:var(--page-w);height:var(--page-h);margin:0;background:var(--bg);padding:var(--pad-y) var(--pad-x);position:relative;overflow:hidden;font-size:7pt;line-height:1.35}
+.header{position:relative;padding-right:52px}.name{font-size:19pt;font-weight:600;letter-spacing:.5px;line-height:1.1;margin-bottom:3px}.contact{margin-top:5px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}.contact .item{display:flex;align-items:center;gap:4px;font-size:7pt;font-weight:500}.contact .icon{width:6px;height:6px;background:var(--ink);display:inline-block;flex-shrink:0}.photo{position:absolute;right:0;top:0;width:45px;height:58px;background:var(--gray-soft);overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.section-title{font-size:10pt;font-weight:600;margin-top:10px;margin-bottom:5px;padding-bottom:1px;border-bottom:1px solid var(--ink);display:flex;align-items:baseline}.section-title .en{font-size:10pt;font-weight:600;margin-left:1px;letter-spacing:.5px}.entry{margin-bottom:7px;padding-bottom:7px;border-bottom:1px solid #e0e0e0}.entry:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-size:7.5pt;font-weight:600;margin-bottom:5px}.company-wrap{display:flex;align-items:baseline;gap:3px;flex-wrap:wrap}.company{font-size:7.5pt;font-weight:600}.company .note{font-size:6pt;font-weight:400;color:#555;margin-left:1px}.dept-inline{font-size:6pt;font-weight:400;color:#666;margin-left:2px}.role{font-size:6.5pt;font-weight:600;color:var(--ink)}.date{font-size:7.5pt;font-weight:600;white-space:nowrap}
+.project-header{background:var(--gray-soft);padding:2px 5px;margin-top:4px;margin-bottom:3px;display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}.pill-title{font-size:6.5pt;font-weight:600;white-space:nowrap}.pill-sub{font-size:6pt;font-weight:400;color:#444;line-height:1.3}.bullets{margin-top:2px;padding-left:0}.bullets li{list-style:none;position:relative;padding-left:8px;font-size:6.5pt;font-weight:400;margin-bottom:2px;line-height:1.45}.bullets li:last-child{margin-bottom:0}.bullets li::before{content:"";position:absolute;left:1px;top:4px;width:2px;height:2px;background:var(--ink)}.b-semi{font-weight:600}.u-line{text-decoration:underline;text-underline-offset:1px;text-decoration-thickness:.5px}.achievement{margin-top:3px;font-size:6.5pt;font-weight:600;line-height:1.4}
+.edu-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;gap:6px}.edu-school{font-size:7.5pt;font-weight:600;white-space:nowrap}.edu-school.lite{font-weight:300}.edu-date{font-size:7.5pt;font-weight:600;white-space:nowrap}.edu-major{font-size:7pt;font-weight:400;text-align:right;flex:1}.skills-line{margin-top:5px;font-size:6.5pt;font-weight:400;line-height:1.5}.skills-line .label{font-weight:600;margin-right:3px}
+@page{size:595px 837px;margin:0}@media print{html,body{width:595px;height:837px;overflow:hidden}.page{margin:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 </head>
 <body>
-<div class="viewport" id="viewport"><main class="stage" id="stage"><section class="canvas" id="canvas"><article class="page" aria-label="Design Minimalist 613 匿名示例">
+<main class="page" aria-label="匿名简历示例">
 <header class="header">
-  <div class="name">Design Minimalist 613</div>
-  <div class="contact"><span>AI 产品运营</span><span>视觉系统设计</span><span>公开履历示例</span></div>
-  <div class="photo"><img src="assets/profile-avatar.png" alt="匿名人物插画"></div>
+  <div class="name">姓名已隐藏</div>
+  <div class="contact"><span class="item"><span class="icon"></span>联系方式已隐藏</span><span class="item"><span class="icon"></span>作品链接已隐藏</span><span class="item"><span class="icon"></span>邮箱已隐藏</span></div>
+  <div class="photo"><img src="assets/profile-avatar.png" alt="匿名头像"></div>
 </header>
-<h2 class="section-title">实习经历<span class="en">EXPERIENCE</span></h2>
-<article class="entry">
-  <div class="entry-head"><div class="company-wrap"><span class="company"><span class="company-name">某数字产品团队</span><span class="note">（匿名示例）</span></span><span class="dept-inline">内容生态 - <span class="dept-strong">AI 产品运营</span></span></div><span class="date">时间略</span></div>
-  <section class="project"><div class="project-header"><span class="project-title">生成式内容工作台</span><span class="project-sub">｜需求研究与交付设计</span></div><ul class="bullets">
-    <li><b>需求研究：</b>梳理创作者、运营与审核角色的核心任务，将零散反馈转化为 <em><u>可验证的场景假设</u></em> 与优先级。</li>
-    <li><b>流程搭建：</b>围绕内容生产链路设计 Agent 工作流，沉淀输入模板、评测样例与 <b><em><u>结果验收标准</u></em></b>。</li>
-    <li><b>交付规范：</b>统一页面结构、状态说明和演示口径，使产品方案、视觉稿与上线说明保持一致。</li>
-  </ul></section>
-  <section class="project"><div class="project-header"><span class="project-title">内容质量评测</span><span class="project-sub">｜从案例库到验收标准</span></div><ul class="bullets">
-    <li><b>样例建设：</b>整理典型成功案例与失败案例，建立覆盖信息准确性、可读性和视觉完成度的分层样本。</li>
-    <li><b>评测闭环：</b>把人工判断拆成可复用标签，支持版本比较、问题定位与后续策略迭代。</li>
-  </ul></section>
-</article>
-<article class="entry">
-  <div class="entry-head"><div class="company-wrap"><span class="company"><span class="company-name">某互联网平台</span><span class="note">（匿名示例）</span></span><span class="dept-inline">增长方向 - <span class="dept-strong">策略运营</span></span></div><span class="date">时间略</span></div>
-  <section class="project"><div class="project-header"><span class="project-title">新功能推广</span><span class="project-sub">｜用户洞察与 GTM 协同</span></div><ul class="bullets">
-    <li><b>策略设计：</b>结合用户反馈与使用路径识别关键阻塞点，形成分人群的触达内容与产品教育方案。</li>
-    <li><b>跨团队协同：</b>联动产品、设计和研发推进素材交付，建立 <em><u>目标—动作—结果</u></em> 的复盘框架。</li>
-    <li><b>知识沉淀：</b>把一次性活动方法整理为复用清单，降低后续项目的沟通与启动成本。</li>
-  </ul><p class="achievement"><b>结果：形成可持续复用的项目模板与协作机制</b></p></section>
-  <section class="project"><div class="project-header"><span class="project-title">内容增长实验</span><span class="project-sub">｜结构化测试与复盘</span></div><ul class="bullets">
-    <li><b>实验设计：</b>明确目标人群、内容变量与观测指标，避免多个变量同时变化导致结论失真。</li>
-    <li><b>复盘方法：</b>将有效做法、失败原因与适用边界一并记录，方便下一轮快速复用。</li>
-  </ul></section>
-</article>
-<article class="entry">
-  <div class="entry-head all-strong"><div class="company-wrap"><span class="company">独立设计项目<span class="note">（公开示例）</span></span><span class="dept-inline">视觉系统与网页</span></div><span class="date">持续更新</span></div>
-  <ul class="bullets">
-    <li><b>设计系统：</b>以 4px 网格、字体 Token、雾感色板和视觉量感统一跨媒介输出。</li>
-    <li><b>项目模板：</b>为 PPT、简历和个人网页保留 HTML 源实例，避免每次从零猜测结构。</li>
-    <li><b>经验回流：</b>确认有效的规则先进入项目 preset，再根据跨项目表现决定是否晋升通用层。</li>
-  </ul>
-</article>
+<h2 class="section-title">实习经历<span class="en">INTERNSHIP</span></h2>
+<section class="entry">
+  <div class="entry-head"><div class="company-wrap"><span class="company">某科技平台<span class="note">（机构信息已隐藏）</span></span><span class="dept-inline">某业务方向 - <span class="role">产品运营</span></span></div><span class="date">时间已隐藏</span></div>
+  <div class="project-header"><span class="pill-title">项目 A</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
+  <ul class="bullets"><li><span class="b-semi">职责：</span>具体经历已隐藏，仅保留原始简历的信息层级、段落密度与强调关系。</li><li><span class="b-semi">方法：</span>将零散工作描述整理为目标、动作、协作与结果，形成可阅读的结构化表达。</li><li><span class="b-semi">成果：</span>项目数据与业务细节已隐藏，展示内容不对应任何真实公开信息。</li></ul>
+  <div class="project-header"><span class="pill-title">项目 B</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
+  <ul class="bullets"><li><span class="b-semi">职责：</span>具体经历已隐藏，仅展示双项目在同段经历中的编排方式。</li><li><span class="b-semi">沉淀：</span>保留小标题、正文和重点标记的视觉层级，便于替换为个人内容。</li></ul>
+</section>
+<section class="entry">
+  <div class="entry-head"><div class="company-wrap"><span class="company">某互联网平台<span class="note">（机构信息已隐藏）</span></span><span class="dept-inline">某增长方向 - <span class="role">策略运营</span></span></div><span class="date">时间已隐藏</span></div>
+  <div class="project-header"><span class="pill-title">项目 C</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
+  <ul class="bullets"><li><span class="b-semi">策略：</span>具体经历已隐藏，保留原页面的紧凑信息密度与长短句节奏。</li><li><span class="b-semi">协作：</span>协作对象、执行范围与结果指标均不对外展示。</li><li><span class="b-semi">复盘：</span>由 AI 将自然语言经历转化为结构清楚、重点明确的简历条目。</li></ul>
+  <div class="achievement">成果：具体奖项与业务结果已隐藏</div>
+  <div class="project-header"><span class="pill-title">项目 D</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
+  <ul class="bullets"><li><span class="b-semi">执行：</span>具体经历已隐藏，保留信息层级和版式关系。</li><li><span class="b-semi">结果：</span>数值、品牌与人名等识别信息均已移除。</li></ul>
+</section>
+<section class="entry">
+  <div class="entry-head"><div class="company-wrap"><span class="company">某消费品牌<span class="note">（机构信息已隐藏）</span></span><span class="dept-inline">品牌方向 - <span class="role">产品策划</span></span></div><span class="date">时间已隐藏</span></div>
+  <ul class="bullets"><li><span class="b-semi">工作内容：</span>具体产品、合作对象、渠道与传播数据已隐藏。</li><li><span class="b-semi">能力概括：</span>保留策划、协作、推广和复盘等可迁移能力标签。</li></ul>
+</section>
 <h2 class="section-title">教育经历<span class="en">EDUCATION</span></h2>
-<div class="edu-row"><b>某高校</b><span class="edu-date"><b>时间略</b></span><span class="edu-major"><b>专业方向</b></span></div>
-<div class="edu-row"><span>课程与研究经历略</span><span class="edu-date">公开示例</span><span class="edu-major">学历略</span></div>
-<h2 class="section-title">技能与工具<span class="en">SKILLS</span></h2>
-<section class="skills"><ul class="bullets">
-  <li><b>产品与运营：</b>用户研究、需求拆解、GTM、内容策略、项目推进与跨团队协同。</li>
-  <li><b>设计与实现：</b>信息架构、设计系统、HTML/CSS、原型制作与 <em><u>固定画板高保真导出</u></em>。</li>
-</ul><p class="tools"><b>工具：</b>Figma｜HTML / CSS｜数据分析｜Agent Workflow｜文档协作</p></section>
-</article></section></main></div>
-<script>
-(function(){
-  const W=595,H=837,stage=document.getElementById('stage'),canvas=document.getElementById('canvas');
-  function fit(){
-    if(window.matchMedia('print').matches){stage.style.width=W+'px';stage.style.height=H+'px';canvas.style.transform='none';return;}
-    const pad=40,availableW=Math.max(1,window.innerWidth-pad),availableH=Math.max(1,window.innerHeight-pad),scale=Math.min(1,availableW/W,availableH/H);
-    stage.style.width=(W*scale)+'px';stage.style.height=(H*scale)+'px';canvas.style.transform='scale('+scale+')';
-  }
-  addEventListener('resize',fit,{passive:true});addEventListener('beforeprint',fit);addEventListener('afterprint',fit);fit();
-})();
-</script>
+<div class="edu-row"><div class="edu-school">某高校 硕士</div><div class="edu-date">时间已隐藏</div><div class="edu-major">专业已隐藏</div></div>
+<div class="edu-row"><div class="edu-school lite">某高校 本科</div><div class="edu-date">时间已隐藏</div><div class="edu-major">专业已隐藏</div></div>
+<h2 class="section-title">专业技能与项目<span class="en">SKILLS &amp; PROJECTS</span></h2>
+<ul class="bullets"><li><span class="b-semi">项目能力：</span>可将任意自然语言经历整理为目标、动作、结果与方法沉淀。</li><li><span class="b-semi">设计能力：</span>使用固定画板、字体层级和分割线系统生成一页式简历。</li></ul>
+<div class="skills-line"><span class="label">工具栈：</span>文档协作｜数据分析｜原型工具｜AI 工作流</div>
+</main>
 </body>
 </html>

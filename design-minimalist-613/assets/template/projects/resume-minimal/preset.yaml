@@ -4,6 +4,8 @@ entry:
   project_index: ../../../../references/PROJECTS.md
   html_example: ./example.html
   render_contract: ./canvas-contract.md
+  input_example: ./input-example.md
+  usage_showcase: ./how-to-use.html
 canvas:
   canonical: "595x837"
   medium: "single-page A4"

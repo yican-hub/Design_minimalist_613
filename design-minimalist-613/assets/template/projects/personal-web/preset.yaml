@@ -16,4 +16,6 @@ privacy:
   replace_identity: true
   replace_location: true
   replace_contact: true
-  sample_title: "这是一个个人网页"
+  sample_title: "这是一个个人主页"
+  replace_professional_tags: true
+  portrait_style: "user-reference-inspired half-body black-and-white illustration"

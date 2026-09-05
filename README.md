@@ -52,17 +52,17 @@ Design Minimalist 613 的核心不是复刻某一种视觉风格，而是先把*
 
 ![PPT 04 商业模式复杂画布](readme-assets/ppt-04-business-canvas.png)
 
-### 网页｜个人网站首图与图文编排
+### 网页｜匿名首图结构与图文编排
 
-沿用个人网站首屏的原始构图、字体节奏与图文比例，并将身份、地点、经历和联系方式替换为公开示例；人物区域使用 Skill 资产中的匿名人物图。
+保留个人网站首屏的左右构图、字体节奏与图文比例，但不复用个人口号、职业标签或栏目内容；人物区域换成上传手绘头像的原创半身变体。
 
 ![匿名个人网页首图预览](readme-assets/web-personal-anonymized.png)
 
-### 简历｜高密度层级完整展示
+### 简历｜怎么使用
 
-保留“实习经历、教育经历、技能与工具”等通用栏目名，真实姓名、联系方式、学校、公司、项目与日期全部替换；以 2× 分辨率渲染，便于查看极细字体、灰色分区条和紧凑阅读轴。
+随便写下自己的经历即可，不必先整理成专业简历语言。AI 会把自然语言转化为有层级的结构化文档，再套用固定 A4 模板一键生成简历。下图左侧是 Markdown 经历切片，右侧是由该文档生成的匿名简历。
 
-![A4 简历高清匿名预览](readme-assets/resume-full-page.png)
+![从 Markdown 经历到结构化简历](readme-assets/resume-how-to-use.png)
 
 ## 为什么要这样写
 
@@ -93,10 +93,11 @@ PDF 和截图只负责预览，不作为源文件。长期保存采用以下方�
 已归档源文件：
 
 - [完整设计规范 HTML](design-minimalist-613/assets/template/design-spec/index.html)
-- [21 页匿名研究型演示源 HTML](design-minimalist-613/assets/template/projects/ppt-research/source-example.html)
 - [三页 PPT 展示实例](design-minimalist-613/assets/template/projects/ppt-research/example.html)
 - [匿名个人网页源 HTML](design-minimalist-613/assets/template/projects/personal-web/example.html)
 - [匿名 A4 简历源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/example.html)
+- [简历使用方式合图源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/how-to-use.html)
+- [Markdown 经历输入示例](design-minimalist-613/assets/template/projects/resume-minimal/input-example.md)
 
 ## Skill 结构
 

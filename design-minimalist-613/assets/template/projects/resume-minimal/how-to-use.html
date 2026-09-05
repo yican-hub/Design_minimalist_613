@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>怎么使用｜从经历文档到一页式简历</title>
+<style>
+:root{--w:1440px;--h:810px;--paper:#f8f6f7;--white:#fff;--ink:#30363d;--text:#59616a;--muted:#8a929b;--border:#e6e8ea;--purple:#ddd2eb;--purple-deep:#9b88b3;--font:"PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html,body{width:100%;min-height:100%;background:var(--paper);font-family:var(--font);color:var(--ink)}body{display:flex;justify-content:center;align-items:flex-start}.page{width:var(--w);height:var(--h);padding:48px 64px;background:var(--paper);overflow:hidden}.header{height:84px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:20px}.kicker{font-size:13px;font-weight:600;letter-spacing:.12em;color:var(--purple-deep);margin-bottom:8px}.title{font-size:34px;font-weight:300;line-height:1.1;letter-spacing:-.02em}.hint{max-width:420px;font-size:15px;line-height:1.6;color:var(--text);text-align:right}.workspace{height:622px;padding-top:28px;display:grid;grid-template-columns:510px 110px 1fr;align-items:stretch}.source,.result{background:var(--white);border:1px solid var(--border);overflow:hidden}.source{display:flex;flex-direction:column}.panel-head{height:50px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);font-size:13px;font-weight:600;letter-spacing:.06em}.file-pill{padding:5px 8px;background:var(--purple);font-size:11px}.code{flex:1;padding:22px 24px;font:400 14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--text);white-space:pre-wrap}.code .h1{font-size:20px;font-weight:700;color:var(--ink)}.code .h2{font-size:17px;font-weight:700;color:var(--ink)}.code .h3{font-size:15px;font-weight:700;color:var(--purple-deep)}.code .bullet{color:var(--text)}.note{margin:0 24px 22px;padding:13px 15px;border-left:4px solid var(--purple-deep);background:#eee8f5;font-size:14px;line-height:1.55;color:var(--text)}.flow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--muted)}.flow .arrow{font-size:42px;font-weight:200;color:var(--purple-deep)}.flow b{font-size:12px;letter-spacing:.08em;color:var(--ink)}.result{display:flex;flex-direction:column;align-items:center}.result .panel-head{width:100%}.resume-wrap{flex:1;width:100%;display:flex;align-items:center;justify-content:center;padding:18px;background:#fff}.resume-wrap img{height:522px;width:auto;display:block;object-fit:contain;box-shadow:0 0 0 1px var(--border)}
+@page{size:1440px 810px;margin:0}@media print{html,body{width:1440px;height:810px}.page{margin:0}}
+</style>
+</head>
+<body><main class="page">
+<header class="header"><div><div class="kicker">HOW TO USE · RESUME PRESET</div><h1 class="title">随便写经历，AI 自动整理成一页式简历</h1></div><p class="hint">不必先学会“简历语言”。把真实经历写进 Markdown，AI 会提炼层级、统一表达，并套用固定 A4 模板一键生成。</p></header>
+<section class="workspace">
+  <article class="source"><div class="panel-head"><span>原始经历文档</span><span class="file-pill">input-example.md</span></div><div class="code"><span class="h1"># 我的简历素材</span>
+
+<span class="h2">## 经历一｜某段工作或实习</span>
+
+<span class="h3">### 项目 A</span>
+<span class="bullet">- 我当时主要负责什么
+- 遇到了什么问题
+- 我采取了哪些行动
+- 最后取得了什么结果</span>
+
+<span class="h3">### 项目 B</span>
+随便写自己的经历即可，
+不需要先整理成专业简历语言。
+
+<span class="h2">## 教育经历</span>
+<span class="bullet">- 学校、专业、时间</span></div><div class="note">只需保证事实准确；项目命名、层级拆分、重点提炼和版式适配交给 AI。</div></article>
+  <div class="flow"><b>AI STRUCTURE</b><div class="arrow">→</div><span>提炼 · 归类 · 排版</span></div>
+  <article class="result"><div class="panel-head"><span>结构化简历</span><span class="file-pill">A4 · 595 × 837</span></div><div class="resume-wrap"><img src="assets/resume-preview.png" alt="匿名一页式简历"></div></article>
+</section>
+</main></body></html>

@@ -2,6 +2,14 @@
   "version": 1,
   "projects": [
     {
+      "slug": "personal-web",
+      "title": "个人作品网页",
+      "canvas": "1440x900 / fixed showcase",
+      "priority": "balanced",
+      "status": "confirmed",
+      "updated_at": "2026-09-05"
+    },
+    {
       "slug": "ppt-research",
       "title": "研究型演示",
       "canvas": "1440x810 / 16:9",

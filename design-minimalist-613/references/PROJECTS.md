@@ -71,3 +71,17 @@ preset: assets/template/projects/resume-minimal/preset.yaml
 
 固定单页 595×837 A4；HTML 仅外层等比缩放。L1–L5 同时联动字号、字重、行高与段后距，项目标题统一 L3，正文与技能描述统一 L4；分割线按 section/经历/项目递减。富文本逐项映射源标记，头像使用固定框与稳定资源。默认以 HTML 链接和至少 5×/360DPI 无损 PNG 图片 PDF 保真交付，并用 pdfinfo、pdfimages、html_vision 验证；句末无句号仅在明确要求时同步，事实字段变更后重新生成 PDF。
 <!-- AUTO_PROJECT:resume-minimal END -->
+
+<!-- AUTO_PROJECT:personal-web START -->
+## project:personal-web
+
+```yaml
+project: personal-web
+canvas: "1440x900 / fixed showcase"
+priority: balanced
+source: assets/template/projects/personal-web/example.html
+preset: assets/template/projects/personal-web/preset.yaml
+```
+
+以高对比标题、匿名人物插画和多色 Bento 卡片组织个人主页；固定展示画板用于截图，浏览版可整体适配，但不改动内部阅读顺序。
+<!-- AUTO_PROJECT:personal-web END -->

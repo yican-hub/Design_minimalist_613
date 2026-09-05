@@ -1,0 +1,17 @@
+canvas:
+  canonical: "1440x900"
+  ratio: "8:5"
+  responsive_reflow: false
+priority: balanced
+layout:
+  style: editorial-bento
+  hero_ratio: "42/58"
+  card_gap: "16px"
+visual:
+  palette: mist-multicolor
+  corner_radius: "0px"
+  shadow: none
+  typography: system-cjk
+privacy:
+  replace_identity: true
+  sample_title: "这是一个个人网页"

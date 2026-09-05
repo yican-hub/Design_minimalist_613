@@ -1,96 +1,109 @@
 # Design Minimalist 613
 
-> 一套让设计规则稳定、让项目经验持续增长的极简设计 Skill。
+> 把设计从一次性的“做得好看”，变成一套能够持续复用、验证和生长的生成系统。
 
-**当前阶段：Private Draft。** 先在 GitHub 私有仓库中完成检查与定稿，再切换为公开仓库。
+## 它能带来什么：由简单到复杂，快速生成
 
-## 它有什么效果
+### 先固定不变，再放大可变
 
-Design Minimalist 613 把同一套视觉语言应用到不同媒介：固定画板、4px 网格、统一字体 Token、雾感色板与视觉量感规则共同保证输出稳定；项目 preset 再决定当前任务是图片优先、文本优先还是平衡布局。
+Design Minimalist 613 的核心不是复刻某一种视觉风格，而是先把**网格、字体、颜色、视觉量感和画板**这些稳定因素固定下来，再让项目 preset 决定当前场景应该怎样变化。
 
-- **研究型演示**：固定 `1440×810 / 16:9`，一页一个结论，图片或结构图占主体 60–75%。
-- **极简简历**：固定 `595×837 / A4`，文本优先，层级、分割线与分页由同一组 Token 约束。
-- **网页、PDF 与海报**：浏览可以适配容器，但导出前必须回到 canonical canvas，避免随机断页与版式漂移。
+- **通用规则保持稳定**：4px 网格、统一字体 Token、雾感色板与视觉量感建立一致的设计底座。
+- **项目经验持续增长**：每个项目都保留脱敏后的 preset、HTML 源实例和专属资产，让 Agent 先看到“完成后的样子”，再生成新内容。
+- **交付结果可以回流**：被确认可复用的做法先沉淀在项目层；只有跨项目稳定后，才进入通用层。
+
+这套方法可以从一张简单信息页，扩展到复杂流程图、研究型演示、高密度简历、个人网页、PDF、海报与结构化视觉稿。重点不是让所有媒介长得一样，而是让它们共享同一套秩序。
+
+### 不同场景，需要切换不同优先级
+
+| 场景 | 主要注意点 | 推荐策略 |
+|---|---|---|
+| 研究型演示 / PPT | 信息多，但每页仍需只有一个结论 | 固定 `1440×810 / 16:9`；图或结构占主体 60–75% |
+| 极简简历 | 字体细、密度高，最怕缩放后失真 | 固定 `595×837 / A4`；文本优先，保持阅读轴与层级 Token |
+| 网页 / 知识库 | 需要连续浏览，也需要形成稳定截图 | 浏览时允许适配；导出时回到 canonical canvas |
+| PDF / 海报 | 最容易出现随机断页和大面积留白 | 一模块或一结论一页，从未缩放画板导出 |
+| 复杂流程图 | 节点、连线、范围框会同时争夺注意力 | 先分 `mass / surface / line / text`，再按视觉量感对齐 |
+
+### 调试时踩过的坑
+
+1. **流式网页直接打印**：浏览器会随机分页，造成断页与留白；解决方式是先锁定固定画板。
+2. **只靠 `object-fit` 防变形**：图片虽然没被裁切，但面积可能完全不合理；应先确定图文主次，再决定比例。
+3. **所有强调都使用重色**：页面很快失去层级；重色只用于小标签、关键数字和极少量焦点。
+4. **把虚线框当作主对齐边界**：几何上整齐，视觉上却漂移；实体内容应优先对齐同量感对象。
+5. **把项目例外直接写进总规范**：规则会越来越臃肿；先进入项目 preset，跨项目验证后再晋升。
+6. **只保存线上预览地址**：链接失效后无法继续编辑；HTML、CSS、JS 与本地资产必须一起进入 Git。
+7. **只替换姓名，不检查图片与源文件**：截图看似匿名，源码仍可能泄露信息；源 HTML、图片、元数据和 README 预览都要分别检查。
 
 ## 交付物预览
 
-Skill 不只保存抽象规范，也保存已脱敏的项目 preset、源实例和资产，让 Agent 能先看到“完成后的样子”，再复用结构生成新内容。
+以下示例均使用匿名内容，只展示结构、排版、色彩与信息组织方式。
 
-- **PPT 复杂图表**：展示多层信息、数据图表、用户旅程与结论页的组织能力。
-- **网页 / 知识库预览**：展示复杂架构、图文组合、紫 / 绿 / 橙等多色系统与跨模块视觉一致性。
-- **简历复杂层级**：展示高密度文本、标题层级、日期轴、分割线和固定阅读轴。
+### PPT｜由简单到复杂，快速生成
 
-### PPT｜每页完整展示
+**05 研究不足｜四象限问题拆解**
 
-以下页面均保留原始 `16:9` 画板并铺满宽度；内容只使用 `Design Minimalist 613`、`DM613`、`Token`、`Preset`、`模块 A / B / C` 等匿名占位文本。
+![PPT 05 研究不足完整页](readme-assets/ppt-05-limitations.png)
 
-**01 研究概述｜复杂技术路线**
+**02 理论基础｜四层递进结构**
 
-![PPT 01 研究概述完整页](readme-assets/ppt-01-overview.png)
-
-**03 意义收敛｜复杂关联矩阵**
-
-![PPT 03 意义收敛完整页](readme-assets/ppt-03-meaning-matrix.png)
+![PPT 02 理论基础完整页](readme-assets/ppt-02-theory.png)
 
 **04 商业模式｜复杂画布结构**
 
-![PPT 04 商业模式完整页](readme-assets/ppt-04-business-canvas.png)
+![PPT 04 商业模式复杂画布](readme-assets/ppt-04-business-canvas.png)
 
 ### 网页｜多色系统与图文编排
 
-![个人网站首屏脱敏完整预览](readme-assets/web-hero-anonymized.png)
+固定 `1440×900` 展示画板，用匿名人物插画、雾感多色与 Bento 网格表现个人网页的信息层级；所有标题、介绍和导航均为泛化占位内容。
+
+![匿名个人网页完整预览](readme-assets/web-personal-anonymized.png)
 
 ### 简历｜高密度层级完整展示
 
-简历恢复到原始模板的极细字号、高密度单页、灰色分区条与紧凑阅读轴，并使用匿名占位文字替换全部真实信息。
+保留“实习经历、教育经历、技能与工具”等通用栏目名，真实姓名、联系方式、学校、公司、项目与日期全部替换；以 2× 分辨率渲染，便于查看极细字体、灰色分区条和紧凑阅读轴。
 
-![A4 简历脱敏完整页](readme-assets/resume-full-page.png)
-
-| 预览类型 | 媒介策略 | 可复用参考 |
-|---|---|---|
-| PPT 复杂图表 | 16:9、图片优先、一页一结论 | `preset.yaml`、匿名 `example.html`、21 页脱敏源 HTML |
-| 简历复杂层级 | A4、文本优先、固定阅读轴 | `preset.yaml`、匿名 `example.html`、canvas contract、抽象头像 |
-| 网页 / 知识库 | 连续浏览、模块化呈现 | 设计规范源 HTML、结构图与固定画板导出方法 |
-
-项目文件位于 `design-minimalist-613/assets/template/projects/`。其中的 HTML 是结构参考，不是需要照搬的内容模板；README 只展示经过脱敏的截图。
+![A4 简历高清匿名预览](readme-assets/resume-full-page.png)
 
 ## 为什么要这样写
 
-![Design Minimalist 613 层级与流程设计规范](readme-assets/design-philosophy-hierarchy.png)
+设计哲学不是一条孤立规则，而是一套从基础标尺到复用机制的完整系统：
 
-我的设计哲学不是“把风格写成更多规则”，而是把稳定与变化分开：
+1. **网格 × 字体**：用 4px 阶梯和统一字体 Token 建立稳定节奏。
+2. **雾感八色**：让不同主题色拥有接近的视觉重量，而不是随意猜色。
+3. **层级 × 流程**：先判断可见量感，再对齐实体内容、结果层与反馈关系。
+4. **图文 × 形状**：先定信息主角，再分配面积；填色与边线只选一种表达。
+5. **固定画板**：设计、预览与导出共享 canonical canvas，避免响应式重排破坏版式。
+6. **模板分层**：通用规则、项目 preset、源实例、项目资产各自维护，避免互相污染。
 
-1. **规则稳定**：网格、字体、色板、视觉量感和固定画板构成通用层。
-2. **项目增长**：每次被确认可复用的交付，先沉淀为项目 preset、匿名源实例和特殊资产。
-3. **谨慎晋升**：同一做法至少跨两个项目稳定复用后，才建议进入通用层。
+![Design Minimalist 613 完整设计哲学](readme-assets/design-philosophy-full.png)
 
-这能避免两种常见问题：只有规范、没有真实交付物，导致 Agent 不知道如何落地；或者不断把项目例外写进总规则，最终让规范失去边界。
+这套分层解决了两个常见问题：只有规范、没有真实交付物时，Agent 不知道怎样落地；不断把项目例外写进总规则时，规范又会逐渐失去边界。
 
 ## HTML 如何长期保存
 
-PDF 和截图只作为预览，不作为源文件。长期保存采用以下方式：
+PDF 和截图只负责预览，不作为源文件。长期保存采用以下方式：
 
-1. **Git 保存源码**：把 HTML、CSS、JS、图片和字体一起提交，而不是依赖临时预览链接。
-2. **依赖相对路径**：资源放在同一项目目录或直接内联，避免外部 CDN、临时域名和绝对本地路径。
-3. **源文件与预览分离**：源 HTML 负责继续编辑；PNG/PDF 负责快速查看和版本对比。
-4. **静态托管可替换**：私有阶段直接从仓库下载后打开；公开后可选 GitHub Pages 或其他静态托管，源文件仍以 Git 版本为准。
+1. **Git 保存源码**：HTML、CSS、JS、图片和字体一起提交，不依赖临时预览链接。
+2. **依赖相对路径**：资源跟随项目目录保存，避免临时域名和绝对本地路径失效。
+3. **源文件与预览分离**：源 HTML 负责继续编辑；PNG/PDF 负责快速查看与版本对比。
+4. **静态托管可替换**：仓库始终是源文件基线，GitHub Pages 或其他托管只承担访问入口。
 
-代码中的 `data:image/png;base64,...` 不是乱码，而是把图片编码后直接嵌进 HTML 的 **Data URI**。优点是单个 HTML 离线打开也不会丢图，适合长期存档；缺点是代码较长、Git diff 不易阅读。当前 21 页演示保留内嵌图片以确保可携带性，常复用的头像和规范资产则使用 `assets/` 相对路径，兼顾可维护性。
+代码里的 `data:image/png;base64,...` 是把图片直接编码进 HTML 的 **Data URI**，不是乱码。它适合需要单文件离线携带的页面；需要频繁复用的图片则放进 `assets/` 并使用相对路径，便于维护和查看 Git diff。
 
-当前已归档：
+已归档源文件：
 
-- [设计规范源 HTML](design-minimalist-613/assets/template/design-spec/index.html)
-- [21 页脱敏研究型演示源 HTML](design-minimalist-613/assets/template/projects/ppt-research/source-example.html)（已加入打印样式，可直接通过浏览器逐页打印为 PDF）
-- [脱敏 A4 简历源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/example.html)
-
-因此不需要从 PDF 反向还原 HTML，也不会把线上预览地址当作唯一存档。
+- [完整设计规范 HTML](design-minimalist-613/assets/template/design-spec/index.html)
+- [21 页匿名研究型演示源 HTML](design-minimalist-613/assets/template/projects/ppt-research/source-example.html)
+- [三页 PPT 展示实例](design-minimalist-613/assets/template/projects/ppt-research/example.html)
+- [匿名个人网页源 HTML](design-minimalist-613/assets/template/projects/personal-web/example.html)
+- [匿名 A4 简历源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/example.html)
 
 ## Skill 结构
 
 ```text
 Design_minimalist_613/
 ├── README.md
-├── readme-assets/                  # README 展示图，不参与 Skill 运行
+├── readme-assets/                  # GitHub README 展示图
 └── design-minimalist-613/          # 标准 Skill 目录
     ├── SKILL.md
     ├── .skillignore
@@ -104,12 +117,11 @@ Design_minimalist_613/
         ├── design-spec/            # HTML + CSS + JS + 本地资产
         └── projects/
             ├── ppt-research/
+            ├── personal-web/
             └── resume-minimal/
 ```
 
-`readme-assets/` 只是一个普通文件夹，用来存放 GitHub README 中显示的截图与组合预览；它替代了含义较泛的 `docs/`，删掉不会影响 Skill 运行。
-
-`SKILL.md` 的 `name` 必须使用小写字母、数字和连字符，并与技能目录名一致。因此仓库展示名可以是 **Design Minimalist 613**，标准技能目录使用 `design-minimalist-613`。
+`readme-assets/` 只存放 GitHub README 的截图与预览，不参与 Skill 运行。仓库展示名可以使用 **Design Minimalist 613**；标准 Skill 目录与 `SKILL.md` 中的 `name` 必须使用小写、数字和连字符，因此写作 `design-minimalist-613`。
 
 ## 使用方式
 
@@ -117,6 +129,7 @@ Design_minimalist_613/
 
 - “按 Design Minimalist 613 的规范做一份研究型演示”
 - “用现有 resume preset 生成一页 A4 简历”
+- “基于个人网页示例做一张多色作品页”
 - “把这次确认的海报方案沉淀进项目库”
 
 新增项目时运行：
@@ -137,4 +150,4 @@ python3 scripts/update_project_catalog.py \
 
 ## 隐私说明
 
-私有版本也按未来公开标准处理：姓名、联系方式、学校、公司、真实项目名称与可识别业务数据均删除或替换；示例图像使用匿名插画或泛化内容。新增项目进入仓库前，也应先完成同等级别的脱敏。
+所有示例均按公开发布标准处理：姓名、联系方式、学校、公司、真实项目名称、日期与可识别业务数据均删除或替换；人物图像使用匿名插画。新增项目进入仓库前，也应完成同等级别的源文件与预览图检查。

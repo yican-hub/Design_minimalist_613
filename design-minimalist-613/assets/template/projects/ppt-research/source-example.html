@@ -115,6 +115,16 @@ tl-view > tl-origin { display: inline; }
 .foot-tag { position: absolute; left: 68px; bottom: 28px; font-size: 13px; color: var(--muted); letter-spacing: 0.06em; }
 
 .innov-badge { display: inline-block; background: var(--accent-deep); color: var(--white); font-size: 15px; font-weight: 600; letter-spacing: 0.08em; padding: 6px 16px; margin-bottom: 12px; }
+
+@media print {
+  @page { size: 13.333in 7.5in; margin: 0; }
+  html, body { width: auto; height: auto; overflow: visible; background: #fff; }
+  .deck-shell { position: static; display: block; overflow: visible; background: #fff; }
+  .deck-viewport { width: var(--slide-width); height: auto; transform: none !important; overflow: visible; }
+  .deck { display: block; width: var(--slide-width); height: auto; transform: none !important; }
+  .slide { width: var(--slide-width); height: var(--slide-height); break-after: page; page-break-after: always; }
+  .slide:last-child { break-after: auto; page-break-after: auto; }
+}
 </style>
 </head>
 <body>

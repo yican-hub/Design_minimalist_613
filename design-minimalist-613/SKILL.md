@@ -1,7 +1,7 @@
 ---
 name: design-minimalist-613
 description: 一套可持续积累项目经验的极简设计输出系统，基于固定画板、4px 网格、统一字体 Token、雾感色板和视觉量感规则生成 PPT、简历、网页展示、PDF、海报及结构化流程图；支持复用匿名化项目 HTML 与资产，并在项目确认后通过 Project Loop 将新项目 preset、源实例和特殊规则追加到项目库。适用于“按既有设计规范输出”“复用 design template”“生成跨媒介一致的视觉稿”或“把本次项目沉淀进模板”等场景。
-author: yican
+author: Design Minimalist 613
 ---
 
 # Design Minimalist 613

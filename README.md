@@ -17,10 +17,16 @@ Design Minimalist 613 把同一套视觉语言应用到不同媒介：固定画�
 Skill 不只保存抽象规范，也保存已脱敏的项目 preset、源实例和资产，让 Agent 能先看到“完成后的样子”，再复用结构生成新内容。
 
 - **PPT 复杂图表**：展示多层信息、数据图表、用户旅程与结论页的组织能力。
-- **网页 / 知识库预览**：展示复杂架构、图文组合与跨模块视觉一致性。
+- **网页 / 知识库预览**：展示复杂架构、图文组合、紫 / 绿 / 橙等多色系统与跨模块视觉一致性。
 - **简历复杂层级**：展示高密度文本、标题层级、日期轴、分割线和固定阅读轴。
 
-![PPT、网页知识库与简历的脱敏交付物预览](readme-assets/deliverables-preview.png)
+**PPT｜复杂图表与排版**：选择 `01 研究概述`、`03 意义收敛`、`04 商业模式` 三页，展示技术路线、关联矩阵与商业画布。
+
+![PPT 复杂图表与排版预览](readme-assets/ppt-complex-layouts.png)
+
+**网页 × 简历｜跨媒介一致性**：个人网站首屏与 A4 简历均已脱敏，组合展示多色视觉系统、图文编排与高密度层级。
+
+![个人网站首屏与 A4 简历脱敏预览](readme-assets/web-resume-cross-media.png)
 
 | 预览类型 | 媒介策略 | 可复用参考 |
 |---|---|---|
@@ -51,10 +57,12 @@ PDF 和截图只作为预览，不作为源文件。长期保存采用以下方�
 3. **源文件与预览分离**：源 HTML 负责继续编辑；PNG/PDF 负责快速查看和版本对比。
 4. **静态托管可替换**：私有阶段直接从仓库下载后打开；公开后可选 GitHub Pages 或其他静态托管，源文件仍以 Git 版本为准。
 
+代码中的 `data:image/png;base64,...` 不是乱码，而是把图片编码后直接嵌进 HTML 的 **Data URI**。优点是单个 HTML 离线打开也不会丢图，适合长期存档；缺点是代码较长、Git diff 不易阅读。当前 21 页演示保留内嵌图片以确保可携带性，常复用的头像和规范资产则使用 `assets/` 相对路径，兼顾可维护性。
+
 当前已归档：
 
 - [设计规范源 HTML](design-minimalist-613/assets/template/design-spec/index.html)
-- [21 页脱敏研究型演示源 HTML](design-minimalist-613/assets/template/projects/ppt-research/source-example.html)
+- [21 页脱敏研究型演示源 HTML](design-minimalist-613/assets/template/projects/ppt-research/source-example.html)（已加入打印样式，可直接通过浏览器逐页打印为 PDF）
 - [脱敏 A4 简历源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/example.html)
 
 因此不需要从 PDF 反向还原 HTML，也不会把线上预览地址当作唯一存档。

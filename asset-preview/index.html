@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design Minimalist 613｜资产预览</title>
+<style>
+:root{
+  --paper:#f8f6f7;--white:#fff;--ink:#30363d;--text:#59616a;--muted:#8a929b;--line:#e6e8ea;
+  --purple:#ddd2eb;--purple-deep:#9b88b3;--blue:#c8d9ef;--orange:#ebd2c2;
+  --font:"PingFang SC","Noto Sans SC","Source Han Sans SC",sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}
+a{color:inherit}.topbar{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:rgba(248,246,247,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(16px)}
+.brand{font-size:13px;font-weight:700;letter-spacing:.12em}.brand b{margin-left:8px;padding:6px;background:var(--purple)}.nav{display:flex;gap:24px;font-size:13px;color:var(--text)}.nav a{text-decoration:none}.nav a:hover{color:var(--purple-deep)}
+main{width:min(1280px,90vw);margin:0 auto;padding:72px 0 96px}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:end;padding-bottom:48px;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--purple-deep)}h1{max-width:760px;margin:16px 0 0;font-size:64px;font-weight:300;line-height:1.05;letter-spacing:-.04em}h1 em{font-style:normal;color:var(--purple-deep)}.intro{font-size:16px;line-height:1.8;color:var(--text)}
+.section{padding:64px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.section-index{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--purple-deep)}h2{margin:8px 0 0;font-size:34px;font-weight:400;letter-spacing:-.02em}.source{font-size:13px;color:var(--text);text-decoration:none;border-bottom:1px solid var(--purple-deep);padding-bottom:3px}.source:hover{color:var(--purple-deep)}
+.gallery{display:grid;grid-template-columns:1fr;gap:24px}.frame{margin:0;background:var(--white);border:1px solid var(--line);padding:14px;overflow:hidden}.frame img{display:block;width:100%;height:auto}.caption{display:flex;justify-content:space-between;gap:24px;padding:14px 4px 2px;font-size:14px;color:var(--text)}.caption strong{color:var(--ink)}
+.resume-frame{padding:0;background:transparent;border:0}.resume-frame img{width:100%;height:auto}.philosophy img{max-width:960px;margin:0 auto}.footer{padding-top:32px;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;line-height:1.6}
+@media(max-width:820px){.nav{display:none}main{width:min(94vw,720px);padding-top:44px}.hero{grid-template-columns:1fr;gap:20px}h1{font-size:44px}.section-head{align-items:start;gap:20px;flex-direction:column}.frame{padding:6px}.caption{flex-direction:column;gap:4px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="brand">DESIGN MINIMALIST <b>613</b></div><nav class="nav"><a href="#ppt">PPT</a><a href="#web">网页</a><a href="#resume">简历</a><a href="#system">设计哲学</a></nav></header>
+<main>
+  <section class="hero"><div><div class="kicker">ASSET GALLERY · DESIGN SYSTEM</div><h1>一次查看全部<em>设计资产</em></h1></div><p class="intro">在同一页面浏览 PPT、个人网页、简历生成方式与完整设计哲学，不必逐个打开源代码，也能快速理解这套 Skill 的视觉效果和使用方式。</p></section>
+
+  <section class="section" id="ppt"><div class="section-head"><div><div class="section-index">01 / PRESENTATION</div><h2>研究型演示</h2></div><a class="source" href="https://github.com/yican-hub/Design_minimalist_613/blob/main/design-minimalist-613/assets/template/projects/ppt-research/example.html">查看源 HTML ↗</a></div><div class="gallery">
+    <figure class="frame"><img src="assets/ppt-05-limitations.png" alt="研究不足页面"><figcaption class="caption"><strong>05 研究不足</strong><span>四项问题卡片与结论栏</span></figcaption></figure>
+    <figure class="frame"><img src="assets/ppt-02-theory.png" alt="理论基础页面"><figcaption class="caption"><strong>02 理论基础</strong><span>由通用规则到项目交付</span></figcaption></figure>
+    <figure class="frame"><img src="assets/ppt-04-business-canvas.png" alt="复杂画布页面"><figcaption class="caption"><strong>04 复杂画布</strong><span>多模块、多层级、多关系编排</span></figcaption></figure>
+  </div></section>
+
+  <section class="section" id="web"><div class="section-head"><div><div class="section-index">02 / PERSONAL WEB</div><h2>个人网页首图</h2></div><a class="source" href="https://github.com/yican-hub/Design_minimalist_613/blob/main/design-minimalist-613/assets/template/projects/personal-web/example.html">查看源 HTML ↗</a></div><figure class="frame"><img src="assets/web-personal-anonymized.png" alt="个人网页首图"><figcaption class="caption"><strong>人物视觉 × 超大标题</strong><span>固定画板 1440 × 920</span></figcaption></figure></section>
+
+  <section class="section" id="resume"><div class="section-head"><div><div class="section-index">03 / RESUME</div><h2>从经历文档到一页简历</h2></div><a class="source" href="https://github.com/yican-hub/Design_minimalist_613/blob/main/design-minimalist-613/assets/template/projects/resume-minimal/how-to-use.html">查看源 HTML ↗</a></div><figure class="resume-frame"><img src="assets/resume-how-to-use.png" alt="Markdown 经历生成结构化简历"><figcaption class="caption"><strong>随便写经历，AI 自动整理</strong><span>左侧 Markdown 输入，右侧 A4 简历结果</span></figcaption></figure></section>
+
+  <section class="section" id="system"><div class="section-head"><div><div class="section-index">04 / DESIGN SYSTEM</div><h2>完整设计哲学</h2></div><a class="source" href="https://github.com/yican-hub/Design_minimalist_613/blob/main/design-minimalist-613/assets/template/design-spec/index.html">查看源 HTML ↗</a></div><figure class="frame philosophy"><img src="assets/design-philosophy-full.png" alt="Design Minimalist 613 完整设计哲学"></figure></section>
+
+  <footer class="footer"><span>Design Minimalist 613</span><span>固定画板 · 4px 网格 · 字体 Token · 雾感色板 · Project Loop</span></footer>
+</main>
+</body>
+</html>

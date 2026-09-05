@@ -60,7 +60,7 @@ Design Minimalist 613 的核心不是复刻某一种视觉风格，而是先把*
 
 ### 简历｜怎么使用
 
-随便写下自己的经历即可，不必先整理成专业简历语言。AI 会把自然语言转化为有层级的结构化文档，再套用固定 A4 模板一键生成简历。下图左侧是 Markdown 经历切片，右侧是由该文档生成的匿名简历。
+随便写下自己的经历即可，不必先整理成专业简历语言。AI 会把自然语言转化为有层级的结构化文档，再套用固定 A4 模板一键生成简历。下图左侧是 Markdown 经历切片，右侧是生成后的完整简历。
 
 ![从 Markdown 经历到结构化简历](readme-assets/resume-how-to-use.png)
 
@@ -95,7 +95,7 @@ PDF 和截图只负责预览，不作为源文件。长期保存采用以下方�
 - [完整设计规范 HTML](design-minimalist-613/assets/template/design-spec/index.html)
 - [三页 PPT 展示实例](design-minimalist-613/assets/template/projects/ppt-research/example.html)
 - [匿名个人网页源 HTML](design-minimalist-613/assets/template/projects/personal-web/example.html)
-- [匿名 A4 简历源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/example.html)
+- [A4 简历源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/example.html)
 - [简历使用方式合图源 HTML](design-minimalist-613/assets/template/projects/resume-minimal/how-to-use.html)
 - [Markdown 经历输入示例](design-minimalist-613/assets/template/projects/resume-minimal/input-example.md)
 

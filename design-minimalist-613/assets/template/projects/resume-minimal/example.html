@@ -8,47 +8,51 @@
 :root{--bg:#fff;--ink:#000;--gray-soft:#ebebeb;--gray-line:#cfcfcf;--page-w:595px;--page-h:837px;--pad-x:32px;--pad-y:22px}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;min-height:100%;background:#fff;font-family:"PingFang SC","AlibabaPuHuiTi 2.0","Noto Sans CJK SC","Microsoft YaHei",sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
-body{display:flex;justify-content:center;align-items:flex-start;overflow:auto}.page{width:var(--page-w);height:var(--page-h);margin:0;background:var(--bg);padding:var(--pad-y) var(--pad-x);position:relative;overflow:hidden;font-size:7pt;line-height:1.35}
-.header{position:relative;padding-right:52px}.name{font-size:19pt;font-weight:600;letter-spacing:.5px;line-height:1.1;margin-bottom:3px}.contact{margin-top:5px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}.contact .item{display:flex;align-items:center;gap:4px;font-size:7pt;font-weight:500}.contact .icon{width:6px;height:6px;background:var(--ink);display:inline-block;flex-shrink:0}.photo{position:absolute;right:0;top:0;width:45px;height:58px;background:var(--gray-soft);overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
-.section-title{font-size:10pt;font-weight:600;margin-top:10px;margin-bottom:5px;padding-bottom:1px;border-bottom:1px solid var(--ink);display:flex;align-items:baseline}.section-title .en{font-size:10pt;font-weight:600;margin-left:1px;letter-spacing:.5px}.entry{margin-bottom:7px;padding-bottom:7px;border-bottom:1px solid #e0e0e0}.entry:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-size:7.5pt;font-weight:600;margin-bottom:5px}.company-wrap{display:flex;align-items:baseline;gap:3px;flex-wrap:wrap}.company{font-size:7.5pt;font-weight:600}.company .note{font-size:6pt;font-weight:400;color:#555;margin-left:1px}.dept-inline{font-size:6pt;font-weight:400;color:#666;margin-left:2px}.role{font-size:6.5pt;font-weight:600;color:var(--ink)}.date{font-size:7.5pt;font-weight:600;white-space:nowrap}
-.project-header{background:var(--gray-soft);padding:2px 5px;margin-top:4px;margin-bottom:3px;display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}.pill-title{font-size:6.5pt;font-weight:600;white-space:nowrap}.pill-sub{font-size:6pt;font-weight:400;color:#444;line-height:1.3}.bullets{margin-top:2px;padding-left:0}.bullets li{list-style:none;position:relative;padding-left:8px;font-size:6.5pt;font-weight:400;margin-bottom:2px;line-height:1.45}.bullets li:last-child{margin-bottom:0}.bullets li::before{content:"";position:absolute;left:1px;top:4px;width:2px;height:2px;background:var(--ink)}.b-semi{font-weight:600}.u-line{text-decoration:underline;text-underline-offset:1px;text-decoration-thickness:.5px}.achievement{margin-top:3px;font-size:6.5pt;font-weight:600;line-height:1.4}
-.edu-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px;gap:6px}.edu-school{font-size:7.5pt;font-weight:600;white-space:nowrap}.edu-school.lite{font-weight:300}.edu-date{font-size:7.5pt;font-weight:600;white-space:nowrap}.edu-major{font-size:7pt;font-weight:400;text-align:right;flex:1}.skills-line{margin-top:5px;font-size:6.5pt;font-weight:400;line-height:1.5}.skills-line .label{font-weight:600;margin-right:3px}
+body{display:flex;justify-content:center;align-items:flex-start;overflow:auto}.page{width:var(--page-w);height:var(--page-h);margin:0;background:var(--bg);padding:var(--pad-y) var(--pad-x);position:relative;overflow:hidden;font-size:7.5pt;line-height:1.48;display:flex;flex-direction:column;justify-content:space-between}.page>*{flex:none}
+.header{position:relative;padding-right:52px}.name{font-size:20pt;font-weight:600;letter-spacing:.5px;line-height:1.1;margin-bottom:3px}.contact{margin-top:5px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}.contact .item{display:flex;align-items:center;gap:4px;font-size:7.4pt;font-weight:500}.contact .icon{width:6px;height:6px;background:var(--ink);display:inline-block;flex-shrink:0}.photo{position:absolute;right:0;top:0;width:45px;height:58px;background:var(--gray-soft);overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.section-title{font-size:10.5pt;font-weight:600;margin-top:11px;margin-bottom:6px;padding-bottom:2px;border-bottom:1px solid var(--ink);display:flex;align-items:baseline}.section-title .en{font-size:10pt;font-weight:600;margin-left:2px;letter-spacing:.5px}.entry{margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #e0e0e0}.entry:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}.entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:6px;font-size:8pt;font-weight:600;margin-bottom:6px}.company-wrap{display:flex;align-items:baseline;gap:3px;flex-wrap:wrap}.company{font-size:8pt;font-weight:600}.company .note{font-size:6.4pt;font-weight:400;color:#555;margin-left:1px}.dept-inline{font-size:6.8pt;font-weight:400;color:#666;margin-left:2px}.role{font-size:7.2pt;font-weight:600;color:var(--ink)}.date{font-size:8pt;font-weight:600;white-space:nowrap}
+.project-header{background:var(--gray-soft);padding:3px 6px;margin-top:5px;margin-bottom:4px;display:flex;align-items:baseline;gap:5px;flex-wrap:wrap}.pill-title{font-size:7.2pt;font-weight:600;white-space:nowrap}.pill-sub{font-size:6.7pt;font-weight:400;color:#444;line-height:1.35}.bullets{margin-top:2px;padding-left:0}.bullets li{list-style:none;position:relative;padding-left:8px;font-size:7.1pt;font-weight:400;margin-bottom:2.5px;line-height:1.52}.bullets li:last-child{margin-bottom:0}.bullets li::before{content:"";position:absolute;left:1px;top:4.5px;width:2px;height:2px;background:var(--ink)}.b-semi{font-weight:600}.u-line{text-decoration:underline;text-underline-offset:1px;text-decoration-thickness:.5px}.achievement{margin-top:4px;font-size:7.1pt;font-weight:600;line-height:1.45}
+.edu-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;gap:6px}.edu-school{font-size:8pt;font-weight:600;white-space:nowrap}.edu-school.lite{font-weight:300}.edu-date{font-size:8pt;font-weight:600;white-space:nowrap}.edu-major{font-size:7.5pt;font-weight:400;text-align:right;flex:1}.skills-line{margin-top:6px;font-size:7.1pt;font-weight:400;line-height:1.5}.skills-line .label{font-weight:600;margin-right:3px}
 @page{size:595px 837px;margin:0}@media print{html,body{width:595px;height:837px;overflow:hidden}.page{margin:0;box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 </style>
 </head>
 <body>
 <main class="page" aria-label="匿名简历示例">
 <header class="header">
-  <div class="name">姓名已隐藏</div>
-  <div class="contact"><span class="item"><span class="icon"></span>联系方式已隐藏</span><span class="item"><span class="icon"></span>作品链接已隐藏</span><span class="item"><span class="icon"></span>邮箱已隐藏</span></div>
-  <div class="photo"><img src="assets/profile-avatar.png" alt="匿名头像"></div>
+  <div class="name">示例候选人</div>
+  <div class="contact"><span class="item"><span class="icon"></span>产品运营</span><span class="item"><span class="icon"></span>Agent 项目</span><span class="item"><span class="icon"></span>作品集链接</span></div>
+  <div class="photo"><img src="assets/profile-avatar.png" alt="示例头像"></div>
 </header>
 <h2 class="section-title">实习经历<span class="en">INTERNSHIP</span></h2>
 <section class="entry">
-  <div class="entry-head"><div class="company-wrap"><span class="company">某科技平台<span class="note">（机构信息已隐藏）</span></span><span class="dept-inline">某业务方向 - <span class="role">产品运营</span></span></div><span class="date">时间已隐藏</span></div>
-  <div class="project-header"><span class="pill-title">项目 A</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
-  <ul class="bullets"><li><span class="b-semi">职责：</span>具体经历已隐藏，仅保留原始简历的信息层级、段落密度与强调关系。</li><li><span class="b-semi">方法：</span>将零散工作描述整理为目标、动作、协作与结果，形成可阅读的结构化表达。</li><li><span class="b-semi">成果：</span>项目数据与业务细节已隐藏，展示内容不对应任何真实公开信息。</li></ul>
-  <div class="project-header"><span class="pill-title">项目 B</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
-  <ul class="bullets"><li><span class="b-semi">职责：</span>具体经历已隐藏，仅展示双项目在同段经历中的编排方式。</li><li><span class="b-semi">沉淀：</span>保留小标题、正文和重点标记的视觉层级，便于替换为个人内容。</li></ul>
+  <div class="entry-head"><div class="company-wrap"><span class="company">科技平台 A</span><span class="dept-inline">内容产品方向 - <span class="role">产品运营</span></span></div><span class="date">20XX.XX–至今</span></div>
+  <div class="project-header"><span class="pill-title">智能内容评测</span><span class="pill-sub">搭建评测标准并推动产品闭环优化</span></div>
+  <ul class="bullets"><li><span class="b-semi">标准设计：</span>围绕产品目标梳理评测口径，将主观体验拆解为可执行指标，建立样例、标签与验收规则。</li><li><span class="b-semi">流程建设：</span>串联样本采集、人工判断、问题归因和版本复测，形成可持续迭代的质量评测工作流。</li><li><span class="b-semi">能力迭代：</span>聚合高频问题并还原使用路径，协同产品与技术推进优化，以结构化复盘支持后续决策。</li></ul>
+  <div class="project-header"><span class="pill-title">智能运营工具</span><span class="pill-sub">从用户洞察到功能上线</span></div>
+  <ul class="bullets"><li><span class="b-semi">用户研究：</span>结合访谈、反馈和使用数据识别关键阻塞点，拆分不同阶段用户的核心需求与优先级。</li><li><span class="b-semi">产品共建：</span>联动多角色完成方案确认、素材交付和上线宣导，扩大工具在典型场景中的有效覆盖。</li></ul>
 </section>
 <section class="entry">
-  <div class="entry-head"><div class="company-wrap"><span class="company">某互联网平台<span class="note">（机构信息已隐藏）</span></span><span class="dept-inline">某增长方向 - <span class="role">策略运营</span></span></div><span class="date">时间已隐藏</span></div>
-  <div class="project-header"><span class="pill-title">项目 C</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
-  <ul class="bullets"><li><span class="b-semi">策略：</span>具体经历已隐藏，保留原页面的紧凑信息密度与长短句节奏。</li><li><span class="b-semi">协作：</span>协作对象、执行范围与结果指标均不对外展示。</li><li><span class="b-semi">复盘：</span>由 AI 将自然语言经历转化为结构清楚、重点明确的简历条目。</li></ul>
-  <div class="achievement">成果：具体奖项与业务结果已隐藏</div>
-  <div class="project-header"><span class="pill-title">项目 D</span><span class="pill-sub">项目名称与业务信息已隐藏</span></div>
-  <ul class="bullets"><li><span class="b-semi">执行：</span>具体经历已隐藏，保留信息层级和版式关系。</li><li><span class="b-semi">结果：</span>数值、品牌与人名等识别信息均已移除。</li></ul>
+  <div class="entry-head"><div class="company-wrap"><span class="company">互联网平台 B</span><span class="dept-inline">增长业务方向 - <span class="role">策略运营</span></span></div><span class="date">20XX.XX–20XX.XX</span></div>
+  <div class="project-header"><span class="pill-title">增长项目</span><span class="pill-sub">以分层策略推动方案规模化</span></div>
+  <ul class="bullets"><li><span class="b-semi">策略规划：</span>根据供给质量和用户阶段建立分层策略，明确目标人群、触达方式和可复用的执行节奏。</li><li><span class="b-semi">标杆陪跑：</span>协同关键合作方验证新方案，沉淀可复制案例，并将成功经验转化为后续推广材料。</li><li><span class="b-semi">方法沉淀：</span>把一次性实践整理为操作指南与复盘框架，降低新项目的理解、协作与启动成本。</li></ul>
+  <div class="achievement">成果：形成可复用的增长方法与跨团队协作机制</div>
+  <div class="project-header"><span class="pill-title">产品推广</span><span class="pill-sub">统一规则、页面与沟通口径</span></div>
+  <ul class="bullets"><li><span class="b-semi">项目协同：</span>按准备、上线和推广阶段拆解任务，协调产品、设计、研发和服务团队推进关键节点。</li><li><span class="b-semi">用户教育：</span>围绕不同人群输出分层内容，将复杂规则转化为清晰、可执行的产品使用指引。</li></ul>
 </section>
 <section class="entry">
-  <div class="entry-head"><div class="company-wrap"><span class="company">某消费品牌<span class="note">（机构信息已隐藏）</span></span><span class="dept-inline">品牌方向 - <span class="role">产品策划</span></span></div><span class="date">时间已隐藏</span></div>
-  <ul class="bullets"><li><span class="b-semi">工作内容：</span>具体产品、合作对象、渠道与传播数据已隐藏。</li><li><span class="b-semi">能力概括：</span>保留策划、协作、推广和复盘等可迁移能力标签。</li></ul>
+  <div class="entry-head"><div class="company-wrap"><span class="company">消费品牌 C</span><span class="dept-inline">品牌中心 - <span class="role">产品策划</span></span></div><span class="date">20XX.XX–20XX.XX</span></div>
+  <ul class="bullets"><li><span class="b-semi">产品策划：</span>结合用户需求、品类趋势和供应条件制定新品方案，协同设计与供应环节完成上市准备。</li><li><span class="b-semi">内容传播：</span>围绕产品卖点规划内容主题、达人合作与渠道节奏，并根据反馈持续优化表达方式。</li><li><span class="b-semi">项目复盘：</span>整理关键动作、有效素材与适用边界，形成后续项目可直接调用的经验库。</li></ul>
+</section>
+<section class="entry">
+  <div class="entry-head"><div class="company-wrap"><span class="company">自主项目</span><span class="dept-inline">设计系统与作品集</span></div><span class="date">持续更新</span></div>
+  <ul class="bullets"><li><span class="b-semi">设计系统：</span>以固定画板、字体层级、雾感色板和视觉量感统一 PPT、网页与简历的输出体验。</li><li><span class="b-semi">交付链路：</span>保留模板、源 HTML 与项目资产，让 AI 能够参考真实结构并持续复用。</li></ul>
 </section>
 <h2 class="section-title">教育经历<span class="en">EDUCATION</span></h2>
-<div class="edu-row"><div class="edu-school">某高校 硕士</div><div class="edu-date">时间已隐藏</div><div class="edu-major">专业已隐藏</div></div>
-<div class="edu-row"><div class="edu-school lite">某高校 本科</div><div class="edu-date">时间已隐藏</div><div class="edu-major">专业已隐藏</div></div>
+<div class="edu-row"><div class="edu-school">高校 A 硕士</div><div class="edu-date">20XX.XX–至今</div><div class="edu-major">设计与创新方向</div></div>
+<div class="edu-row"><div class="edu-school lite">高校 B 本科</div><div class="edu-date">20XX.XX–20XX.XX</div><div class="edu-major">设计相关专业</div></div>
 <h2 class="section-title">专业技能与项目<span class="en">SKILLS &amp; PROJECTS</span></h2>
-<ul class="bullets"><li><span class="b-semi">项目能力：</span>可将任意自然语言经历整理为目标、动作、结果与方法沉淀。</li><li><span class="b-semi">设计能力：</span>使用固定画板、字体层级和分割线系统生成一页式简历。</li></ul>
-<div class="skills-line"><span class="label">工具栈：</span>文档协作｜数据分析｜原型工具｜AI 工作流</div>
+<ul class="bullets"><li><span class="b-semi">AI 与产品：</span>需求拆解、Agent 工作流、评测体系、产品运营、GTM 与跨团队项目推进。</li><li><span class="b-semi">设计与表达：</span>信息架构、视觉系统、网页原型、演示设计与固定画板高保真输出。</li><li><span class="b-semi">项目方法：</span>能够把零散经历转化为目标、动作、结果和方法沉淀，形成结构清楚的一页简历。</li></ul>
+<div class="skills-line"><span class="label">工具栈：</span>Figma｜HTML / CSS｜数据分析｜AI Coding｜文档协作</div>
 </main>
 </body>
 </html>

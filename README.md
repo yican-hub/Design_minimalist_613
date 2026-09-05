@@ -20,13 +20,31 @@ Skill 不只保存抽象规范，也保存已脱敏的项目 preset、源实例�
 - **网页 / 知识库预览**：展示复杂架构、图文组合、紫 / 绿 / 橙等多色系统与跨模块视觉一致性。
 - **简历复杂层级**：展示高密度文本、标题层级、日期轴、分割线和固定阅读轴。
 
-**PPT｜复杂图表与排版**：选择 `01 研究概述`、`03 意义收敛`、`04 商业模式` 三页，展示技术路线、关联矩阵与商业画布。
+### PPT｜每页完整展示
 
-![PPT 复杂图表与排版预览](readme-assets/ppt-complex-layouts.png)
+以下页面均保留原始 `16:9` 画板并铺满宽度；内容只使用 `Design Minimalist 613`、`DM613`、`Token`、`Preset`、`模块 A / B / C` 等匿名占位文本。
 
-**网页 × 简历｜跨媒介一致性**：个人网站首屏与 A4 简历均已脱敏，组合展示多色视觉系统、图文编排与高密度层级。
+**01 研究概述｜复杂技术路线**
 
-![个人网站首屏与 A4 简历脱敏预览](readme-assets/web-resume-cross-media.png)
+![PPT 01 研究概述完整页](readme-assets/ppt-01-overview.png)
+
+**03 意义收敛｜复杂关联矩阵**
+
+![PPT 03 意义收敛完整页](readme-assets/ppt-03-meaning-matrix.png)
+
+**04 商业模式｜复杂画布结构**
+
+![PPT 04 商业模式完整页](readme-assets/ppt-04-business-canvas.png)
+
+### 网页｜多色系统与图文编排
+
+![个人网站首屏脱敏完整预览](readme-assets/web-hero-anonymized.png)
+
+### 简历｜高密度层级完整展示
+
+简历恢复到原始模板的极细字号、高密度单页、灰色分区条与紧凑阅读轴，并使用匿名占位文字替换全部真实信息。
+
+![A4 简历脱敏完整页](readme-assets/resume-full-page.png)
 
 | 预览类型 | 媒介策略 | 可复用参考 |
 |---|---|---|
@@ -38,7 +56,7 @@ Skill 不只保存抽象规范，也保存已脱敏的项目 preset、源实例�
 
 ## 为什么要这样写
 
-![Design Minimalist 613 设计规范全页预览](readme-assets/design-philosophy-full-page.png)
+![Design Minimalist 613 层级与流程设计规范](readme-assets/design-philosophy-hierarchy.png)
 
 我的设计哲学不是“把风格写成更多规则”，而是把稳定与变化分开：
 

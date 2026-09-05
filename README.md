@@ -40,11 +40,11 @@ Design Minimalist 613 的核心不是复刻某一种视觉风格，而是先把*
 
 ### PPT｜由简单到复杂，快速生成
 
-**05 研究不足｜四象限问题拆解**
+**05 研究不足｜四项待深化问题**
 
 ![PPT 05 研究不足完整页](readme-assets/ppt-05-limitations.png)
 
-**02 理论基础｜四层递进结构**
+**02 理论基础｜理论演变谱系**
 
 ![PPT 02 理论基础完整页](readme-assets/ppt-02-theory.png)
 
@@ -52,11 +52,11 @@ Design Minimalist 613 的核心不是复刻某一种视觉风格，而是先把*
 
 ![PPT 04 商业模式复杂画布](readme-assets/ppt-04-business-canvas.png)
 
-### 网页｜多色系统与图文编排
+### 网页｜个人网站首图与图文编排
 
-固定 `1440×900` 展示画板，用匿名人物插画、雾感多色与 Bento 网格表现个人网页的信息层级；所有标题、介绍和导航均为泛化占位内容。
+沿用个人网站首屏的原始构图、字体节奏与图文比例，并将身份、地点、经历和联系方式替换为公开示例；人物区域使用 Skill 资产中的匿名人物图。
 
-![匿名个人网页完整预览](readme-assets/web-personal-anonymized.png)
+![匿名个人网页首图预览](readme-assets/web-personal-anonymized.png)
 
 ### 简历｜高密度层级完整展示
 

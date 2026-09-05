@@ -77,11 +77,11 @@ preset: assets/template/projects/resume-minimal/preset.yaml
 
 ```yaml
 project: personal-web
-canvas: "1440x900 / fixed showcase"
-priority: balanced
+canvas: "1440x920 / fixed hero showcase"
+priority: image-first
 source: assets/template/projects/personal-web/example.html
 preset: assets/template/projects/personal-web/preset.yaml
 ```
 
-以高对比标题、匿名人物插画和多色 Bento 卡片组织个人主页；固定展示画板用于截图，浏览版可整体适配，但不改动内部阅读顺序。
+沿用个人网站首屏的左右图文构图、超大标题、人物主视觉与辅助标签；浏览版只整体适配，不改动内部阅读顺序，公开实例替换身份、地点与联系方式。
 <!-- AUTO_PROJECT:personal-web END -->

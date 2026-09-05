@@ -3,20 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>这是一个个人网页｜匿名展示</title>
+<title>这是一个个人网页｜公开示例</title>
 <style>
-:root{--ink:#293139;--text:#5C6670;--muted:#8C959D;--paper:#F5F2EE;--white:#FFF;--lav:#DAD2E8;--blue:#C9DBED;--green:#CFE0D0;--orange:#E8CEBC;--yellow:#E2D8B8;--pink:#E8CECF;--font:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}html,body{width:100%;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}.page{width:1440px;height:900px;margin:0 auto;background:var(--paper);overflow:hidden;position:relative;padding:32px 44px 38px}.topbar{height:48px;display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid rgba(41,49,57,.18)}.brand{font-size:14px;font-weight:650;letter-spacing:.12em}.nav{display:flex;gap:24px;font-size:12px;color:var(--text);letter-spacing:.06em}.hero{height:430px;display:grid;grid-template-columns:.43fr .57fr;gap:20px;padding-top:20px}.intro{background:var(--white);padding:40px 42px;position:relative;display:flex;flex-direction:column}.eyebrow{font-size:12px;letter-spacing:.16em;color:#8B769E;font-weight:650}.intro h1{font-size:58px;line-height:1.04;letter-spacing:-.04em;font-weight:320;margin-top:34px;max-width:500px}.intro p{font-size:16px;line-height:1.72;color:var(--text);margin-top:22px;max-width:430px}.chips{display:flex;gap:8px;margin-top:auto}.chip{padding:8px 12px;font-size:12px;background:var(--lav)}.chip:nth-child(2){background:var(--green)}.chip:nth-child(3){background:var(--orange)}.portrait{position:relative;background:var(--blue);overflow:hidden}.portrait .shape{position:absolute}.shape.a{width:310px;height:310px;border-radius:50%;background:var(--yellow);left:52px;top:54px}.shape.b{width:244px;height:360px;background:var(--pink);right:82px;top:32px;transform:rotate(8deg)}.shape.c{width:210px;height:210px;border-radius:50%;background:var(--green);right:28px;bottom:-44px}.figure{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:190px;height:310px}.head{position:absolute;width:108px;height:122px;border-radius:48% 48% 44% 44%;background:#F4E1D5;left:42px;top:10px}.hair{position:absolute;width:128px;height:88px;border-radius:64px 64px 24px 24px;background:#4B494B;left:31px;top:0}.body{position:absolute;width:188px;height:210px;background:#7A8DA5;left:0;top:111px;clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}.face-line{position:absolute;width:40px;height:1px;background:#7C6B67;left:76px;top:80px}.portrait-note{position:absolute;right:24px;bottom:22px;font-size:12px;letter-spacing:.12em;color:rgba(41,49,57,.7);writing-mode:vertical-rl}
-.grid{height:346px;display:grid;grid-template-columns:1.05fr .95fr 1.25fr .75fr;grid-template-rows:1fr 1fr;gap:12px;margin-top:12px}.card{padding:20px 22px;background:var(--white);display:flex;flex-direction:column;overflow:hidden}.card .index{font-size:11px;letter-spacing:.14em;font-weight:650;color:var(--muted)}.card h2{font-size:22px;line-height:1.28;font-weight:550;margin-top:12px}.card p{font-size:13px;line-height:1.65;color:var(--text);margin-top:7px}.card strong{font-size:42px;line-height:1;font-weight:300;margin-top:auto}.lav{background:var(--lav)}.green{background:var(--green)}.orange{background:var(--orange)}.yellow{background:var(--yellow)}.wide{grid-column:2/span 2}.tall{grid-row:1/span 2;grid-column:4}.bands{display:flex;gap:7px;margin-top:auto}.bands i{display:block;height:68px;flex:1}.bands i:nth-child(1){background:#9F8DB7}.bands i:nth-child(2){background:#91ACC5}.bands i:nth-child(3){background:#91AF92}.bands i:nth-child(4){background:#BE987E}.bands i:nth-child(5){background:#B3A36E}.list{margin-top:18px;display:grid;gap:10px}.list span{display:flex;justify-content:space-between;padding-bottom:9px;border-bottom:1px solid rgba(41,49,57,.18);font-size:13px}.footer{height:26px;margin-top:16px;display:flex;justify-content:space-between;align-items:end;color:var(--muted);font-size:11px;letter-spacing:.08em}
-@media(max-width:900px){body{overflow:auto}.page{transform-origin:top left;transform:scale(calc(100vw / 1440));margin:0;height:900px}}
+:root{
+  --canvas-w:1440px;--canvas-h:920px;
+  --paper:#F8F6F7;--white:#FFFFFF;--ink:#30363D;--text:#59616A;--muted:#8A929B;--border:#E6E8EA;
+  --purple-100:#EEE8F5;--purple-300:#DDD2EB;--purple-500:#CEBFE2;--purple-700:#9B88B3;
+  --green-300:#CADECA;--orange-300:#EBD2C2;
+  --font:"PingFang SC","Microsoft YaHei","Noto Sans SC","Source Han Sans SC",sans-serif;
+  --display:300 96px/1.03 var(--font);--h2:500 22px/1.3 var(--font);--body:400 16px/1.6 var(--font);
+  --label:600 12px/1.35 var(--font);--note:400 13px/1.5 var(--font)
+}
+*{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+html,body{width:100%;min-height:100%;background:var(--paper);color:var(--ink);font-family:var(--font)}
+body{overflow:auto}.page{position:relative;width:var(--canvas-w);height:var(--canvas-h);margin:0 auto;background:var(--paper);overflow:hidden}
+.topbar{position:absolute;z-index:5;left:60px;right:60px;top:16px;height:56px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.92);border:1px solid var(--border)}
+.brand{font:var(--label);letter-spacing:.12em}.brand b{display:inline-flex;margin-left:8px;padding:7px 6px;background:var(--purple-300)}
+.nav{display:flex;gap:32px;color:var(--text);font:var(--note)}.nav span:first-child{padding-bottom:8px;border-bottom:2px solid var(--purple-700);color:var(--ink)}
+.hero{position:relative;width:100%;height:100%;padding:148px 80px 80px;display:grid;grid-template-columns:1.05fr .95fr;gap:72px}
+.hero-copy{display:flex;flex-direction:column;align-items:flex-start}.hero-kicker{display:flex;align-items:center;gap:12px;margin-top:8px;font:var(--label);letter-spacing:.14em}.live-dot{width:8px;height:8px;background:#9AB99B;border-radius:50%}
+h1{margin-top:30px;font:var(--display);letter-spacing:-.03em}h1 em{display:block;color:var(--purple-700);font:inherit;font-style:normal}
+.hero-belief{margin-top:30px;padding:12px 16px;border-left:4px solid var(--purple-700);background:var(--purple-100);color:var(--text);font:var(--body)}.hero-belief strong{color:var(--ink);font-weight:600}
+.primary-action{display:inline-flex;align-items:center;gap:24px;margin-top:28px;padding:15px 20px;background:var(--ink);color:#fff;font:400 14px/1.5 var(--font);text-decoration:none}.primary-action b{font-size:18px;font-weight:400}
+.hero-tags{display:flex;gap:10px;margin-top:32px}.hero-tags span{padding:9px 12px;border:1px solid var(--border);background:#fff;font:var(--note)}
+.hero-intro{width:100%;margin-top:28px;padding-top:24px;border-top:1px solid var(--border);color:var(--text);font:var(--body)}.hero-intro strong{color:var(--ink);font-weight:600}
+.portrait-stage{position:relative;min-width:0;height:650px}.portrait-orbit{position:absolute;border:1px dashed}.orbit-one{width:560px;height:560px;left:8px;top:82px;border-color:var(--purple-500);border-radius:50%}.orbit-two{width:470px;height:610px;left:66px;top:28px;border-color:#AFCDAF;border-radius:50%;transform:rotate(9deg)}
+.portrait-frame{position:absolute;z-index:2;left:88px;top:36px;width:430px;height:570px;padding:12px;background:#fff;transform:rotate(1.8deg)}.portrait-frame img{width:100%;height:100%;display:block;object-fit:cover;object-position:50% 50%}
+.portrait-note{position:absolute;z-index:3;padding:11px 14px;background:#fff;border:1px solid var(--border);font:var(--label);letter-spacing:.08em}.note-one{right:4px;top:86px}.note-two{left:0;bottom:110px}
+.platform-ticket{position:absolute;z-index:4;right:-2px;bottom:64px;width:410px;height:70px;padding:12px 16px;display:grid;grid-template-columns:1fr 32px 1fr;align-items:center;background:#F5E8E0;border:1px solid #B7837E;transform:rotate(-2deg)}.platform-ticket small{display:block;color:var(--muted);font:600 9px/1.2 var(--font);letter-spacing:.08em}.platform-ticket strong{display:block;margin-top:4px;font:600 11px/1.2 var(--font)}.platform-ticket i{text-align:center;font-style:normal;color:var(--purple-700)}
+.coordinate{position:absolute;right:12px;top:0;color:var(--muted);font:400 11px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;text-align:right}
+@media(max-width:900px){.page{margin:0;transform-origin:top left;transform:scale(calc(100vw / 1440));height:920px}}
+@page{size:1440px 920px;margin:0}@media print{html,body{width:1440px;height:920px;background:var(--paper)}.page{margin:0;transform:none!important}}
 </style>
 </head>
 <body>
 <main class="page">
-<header class="topbar"><div class="brand">PERSONAL WEB / DM613</div><nav class="nav"><span>个人网页</span><span>页面索引</span><span>内容结构</span><span>联系示例</span></nav></header>
-<section class="hero"><article class="intro"><span class="eyebrow">这是一个个人网页 · PERSONAL PAGE</span><h1>这是一个<br>个人网页</h1><p>这是一个个人网页。这是一段匿名介绍，用来展示多色系统、图文编排与模块层级，不包含真实姓名、经历、公司或联系方式。</p><div class="chips"><span class="chip">这是一个标签</span><span class="chip">个人网页</span><span class="chip">匿名示例</span></div></article><figure class="portrait" aria-label="匿名人物插画"><i class="shape a"></i><i class="shape b"></i><i class="shape c"></i><div class="figure"><i class="hair"></i><i class="head"></i><i class="face-line"></i><i class="body"></i></div><figcaption class="portrait-note">ANONYMOUS PORTRAIT</figcaption></figure></section>
-<section class="grid"><article class="card lav"><span class="index">01 / ABOUT</span><h2>这是一个个人网页</h2><p>这是一个个人网页，展示清晰标题与短段落之间的阅读节奏。</p><strong>01</strong></article><article class="card wide"><span class="index">02 / COLOR SYSTEM</span><h2>多色系统，不等于颜色堆叠</h2><p>每一种颜色承担固定语义，同明度切换，保持视觉重量一致。</p><div class="bands"><i></i><i></i><i></i><i></i><i></i></div></article><article class="card tall green"><span class="index">03 / INDEX</span><h2>个人网页</h2><div class="list"><span>这是一个标题 <b>01</b></span><span>这是一个标题 <b>02</b></span><span>这是一个标题 <b>03</b></span><span>这是一个标题 <b>04</b></span><span>这是一个标题 <b>05</b></span></div><strong>DM613</strong></article><article class="card orange"><span class="index">04 / LAYOUT</span><h2>图文编排</h2><p>大图建立情绪，小卡片补充层级。</p><strong>60–75%</strong></article><article class="card yellow"><span class="index">05 / SYSTEM</span><h2>统一 Token</h2><p>字号、间距与颜色不在单节点里临时决定。</p><strong>4 px</strong></article><article class="card"><span class="index">06 / LOOP</span><h2>这是一个个人网页</h2><p>保留结构与视觉方法，替换掉所有可识别信息。</p><strong>LOOP</strong></article></section>
-<footer class="footer"><span>DESIGN MINIMALIST 613 · ANONYMIZED SHOWCASE</span><span>1440 × 900</span></footer>
+  <header class="topbar"><div class="brand">DESIGN MINIMALIST <b>613</b></div><nav class="nav"><span>关于</span><span>项目</span><span>设计系统</span><span>生活</span></nav></header>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="hero-kicker"><span class="live-dot"></span>PERSONAL PAGE · DESIGN SYSTEM</div>
+      <h1 id="hero-title">这是一个<em>个人网页</em></h1>
+      <p class="hero-belief">快速落地决定下限，<strong>taste</strong> 决定上限</p>
+      <span class="primary-action">认识这个示例 <b>↘</b></span>
+      <div class="hero-tags"><span>AI 与评测</span><span>产品运营</span><span>设计系统</span></div>
+      <p class="hero-intro">这是一个个人网页的公开示例。它保留真实的构图、字体节奏与图文关系，同时移除姓名、地点、经历和联系方式。</p>
+    </div>
+    <div class="portrait-stage" aria-label="匿名人物资产">
+      <div class="portrait-orbit orbit-one"></div><div class="portrait-orbit orbit-two"></div>
+      <div class="portrait-frame"><img src="assets/portrait.png" alt="匿名人物插画"></div>
+      <div class="portrait-note note-one">○ PUBLIC SHOWCASE</div><div class="portrait-note note-two">✦ TASTE = WEIGHT</div>
+      <div class="platform-ticket"><div><small>PASSENGER</small><strong>PERSONAL PAGE · 0613</strong></div><i>→</i><div><small>DESTINATION</small><strong>PRODUCTIZATION</strong></div></div>
+      <div class="coordinate">CANONICAL CANVAS<br>1440 × 920</div>
+    </div>
+  </section>
 </main>
 </body>
 </html>

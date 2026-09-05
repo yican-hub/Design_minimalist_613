@@ -4,8 +4,8 @@
     {
       "slug": "personal-web",
       "title": "个人作品网页",
-      "canvas": "1440x900 / fixed showcase",
-      "priority": "balanced",
+      "canvas": "1440x920 / fixed hero showcase",
+      "priority": "image-first",
       "status": "confirmed",
       "updated_at": "2026-09-05"
     },
